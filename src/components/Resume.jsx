@@ -1,7 +1,6 @@
-
 import React from 'react';
 import Section from './Section';
-import { experienceData, educationData } from '../data';
+import { useLanguage } from '../context/LanguageContext';
 import { FaGraduationCap, FaBriefcase } from "react-icons/fa6";
 
 const ResumeItem = ({ title, subTitle, description, date }) => {
@@ -24,10 +23,13 @@ const ResumeItem = ({ title, subTitle, description, date }) => {
 };
 
 const Resume = () => {
+    const { currentData } = useLanguage();
+    const { education, experience, ui } = currentData;
+
     return (
         <Section id="resume">
             <div className="mb-16">
-                <h2 className="text-5xl md:text-7xl font-bold mb-6">Education & <br /> Experience</h2>
+                <h2 className="text-5xl md:text-7xl font-bold mb-6 whitespace-pre-line">{ui.resume.title}</h2>
             </div>
 
             <div className="flex flex-col gap-20">
@@ -36,10 +38,10 @@ const Resume = () => {
                         <span className="w-12 h-12 rounded-full bg-[#1a1a1a] border border-[#333] flex items-center justify-center text-[#b9a0ff] text-xl">
                             <FaGraduationCap />
                         </span>
-                        Education
+                        {ui.resume.educationTitle}
                     </h3>
                     <div className="space-y-4">
-                        {educationData.map((item, index) => (
+                        {education.map((item, index) => (
                             <ResumeItem
                                 key={index}
                                 date={item.period}
@@ -56,10 +58,10 @@ const Resume = () => {
                         <span className="w-12 h-12 rounded-full bg-[#1a1a1a] border border-[#333] flex items-center justify-center text-[#b9a0ff] text-xl">
                             <FaBriefcase />
                         </span>
-                        Experience
+                        {ui.resume.experienceTitle}
                     </h3>
                     <div className="space-y-4">
-                        {experienceData.map((item, index) => (
+                        {experience.map((item, index) => (
                             <ResumeItem
                                 key={index}
                                 date={item.period}

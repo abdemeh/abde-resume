@@ -1,21 +1,29 @@
-
 import React from 'react';
 import Section from './Section';
-import { skillsData } from '../data';
+import { useLanguage } from '../context/LanguageContext';
+import { FaLayerGroup } from "react-icons/fa6";
 
 const Skills = () => {
-    return (
-        <Section>
-            <div className="bg-[#111] rounded-[2.5rem] p-10 md:p-16 border border-[#222]">
-                <h2 className="text-4xl font-bold mb-12 text-center">Tools & Technologies</h2>
+    const { currentData } = useLanguage();
+    const { skills, ui } = currentData;
 
-                <div className="flex flex-wrap justify-center gap-6">
-                    {skillsData.map((skill, index) => (
-                        <div key={index} className="flex flex-col items-center gap-3 group">
-                            <div className="w-20 h-20 md:w-24 md:h-24 rounded-3xl bg-[#1a1a1a] border border-[#2a2a2a] flex items-center justify-center text-4xl group-hover:scale-110 group-hover:border-[#b9a0ff] transition-all duration-300 shadow-lg" style={{ color: skill.color }}>
-                                {skill.icon}
-                            </div>
-                            <span className="text-xs font-bold text-gray-500 uppercase tracking-wider group-hover:text-white transition-colors">{skill.name}</span>
+    return (
+        <Section id="skills">
+            <div className="flex flex-col gap-10">
+                <div>
+                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#333] bg-[#111] text-sm mb-8">
+                        <FaLayerGroup className="text-[#b9a0ff]" /> {ui.skills.badge}
+                    </div>
+                    <h2 className="text-4xl md:text-6xl font-bold leading-tight whitespace-pre-line">
+                        {ui.skills.title}
+                    </h2>
+                </div>
+
+                <div className="flex flex-wrap gap-4">
+                    {skills.map((skill, index) => (
+                        <div key={index} className="flex items-center gap-3 px-6 py-4 rounded-2xl bg-[#111] border border-[#222] hover:border-[#444] transition-all group">
+                            <span className="text-2xl group-hover:scale-110 transition-transform" style={{ color: skill.color }}>{skill.icon}</span>
+                            <span className="font-bold text-gray-300 group-hover:text-white transition-colors">{skill.name}</span>
                         </div>
                     ))}
                 </div>
