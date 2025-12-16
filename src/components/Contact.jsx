@@ -13,7 +13,7 @@ const Contact = () => {
                     <h2 className="text-5xl md:text-8xl font-bold mb-8 tracking-tight">Contact Me</h2>
 
                     <p className="text-gray-400 text-xl mb-12">
-                        I'm currently available for freelance projects and open to full-time opportunities.
+                        You can contact me at my email or through my social media profiles.
                     </p>
 
                     <a href={`mailto:${profileData.contact.email}`} className="inline-block px-12 py-6 rounded-full font-bold text-black bg-white hover:bg-gray-200 transition-all text-xl hover:scale-105 shadow-xl">
