@@ -12,9 +12,8 @@ const Hero = () => {
                 <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight mb-8 tracking-tight">
                     I'm {profileData.name.split(' ')[0]} <br />
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#b9a0ff] to-[#ffb0e0]">
-                        Digital Designer
-                    </span> <br />
-                    and Developer.
+                        Cloud Computing Student
+                    </span>
                 </h1>
 
                 <p className="text-gray-400 text-xl md:text-2xl max-w-2xl leading-relaxed mb-12">

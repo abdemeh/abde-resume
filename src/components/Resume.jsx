@@ -53,7 +53,7 @@ const Resume = () => {
 
                 <div>
                     <h3 className="text-3xl font-bold mb-10 flex items-center gap-4">
-                        <span className="w-12 h-12 rounded-full bg-[#1a1a1a] border border-[#333] flex items-center justify-center text-[#ffb0e0] text-xl">
+                        <span className="w-12 h-12 rounded-full bg-[#1a1a1a] border border-[#333] flex items-center justify-center text-[#b9a0ff] text-xl">
                             <FaBriefcase />
                         </span>
                         Experience

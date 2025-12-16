@@ -25,7 +25,7 @@ const Sidebar = () => {
                 <div className="mb-10 text-center md:text-left">
                     <p className="text-gray-400 text-sm mb-2">Specialization:</p>
                     <p className="font-bold text-white text-lg leading-tight mb-6">
-                        Cloud Computing <br /> & Full Stack Dev
+                        Cloud Computing Student <br /> & Full Stack Dev
                     </p>
 
                     <p className="text-gray-400 text-sm mb-2">Based in:</p>
