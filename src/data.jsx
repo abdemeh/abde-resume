@@ -207,9 +207,6 @@ export const data = {
             skills: {
                 badge: "Compétences",
                 title: "Outils & \n Tech"
-            },
-            sidebar: {
-                cta: "Travaillons ensemble !"
             }
         }
     },
@@ -361,9 +358,6 @@ export const data = {
             skills: {
                 badge: "Skills",
                 title: "Tools & \n Tech"
-            },
-            sidebar: {
-                cta: "Let's Work Together!"
             }
         }
     }

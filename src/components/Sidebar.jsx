@@ -50,14 +50,6 @@ const Sidebar = () => {
                     </a>
                 ))}
             </div>
-
-            {/* CTA Button */}
-            <a
-                href="#contact"
-                className="w-full py-4 bg-[#e0c3fc] hover:bg-[#d0b3ec] text-black font-bold text-center rounded-xl transition-colors shadow-[0_0_20px_rgba(224,195,252,0.3)]"
-            >
-                {ui.sidebar.cta}
-            </a>
         </div>
     );
 };
