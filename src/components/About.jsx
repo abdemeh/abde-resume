@@ -11,16 +11,12 @@ const About = () => {
         <Section id="about">
             <div className="flex flex-col gap-16">
                 <div>
-                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#333] bg-[#111] text-sm mb-8">
-                        <FaUser className="text-[#b9a0ff]" /> {ui.about.badge}
-                    </div>
-
-                    <h2 className="text-4xl md:text-6xl font-bold max-w-4xl leading-tight">
+                    <h2 className="text-4xl min-[1025px]:text-6xl font-bold max-w-4xl leading-tight">
                         {ui.about.title} <span className="text-gray-500">{ui.about.titleHighlight}</span>
                     </h2>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-12 bg-[#111] rounded-[2.5rem] p-8 md:p-12 border border-[#222]">
+                <div className="grid min-[1025px]:grid-cols-2 gap-12 bg-[#111] rounded-[2.5rem] p-8 min-[1025px]:p-12 border border-[#222]">
                     <div className="space-y-6">
                         <h3 className="text-2xl font-bold text-white">{ui.about.whoAmI}</h3>
                         <p className="text-gray-400 text-lg leading-relaxed">

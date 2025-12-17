@@ -1,7 +1,6 @@
 import React from 'react';
 import Section from './Section';
 import { useLanguage } from '../context/LanguageContext';
-import { FaLayerGroup } from "react-icons/fa6";
 
 const Skills = () => {
     const { currentData } = useLanguage();
@@ -11,10 +10,7 @@ const Skills = () => {
         <Section id="skills">
             <div className="flex flex-col gap-10">
                 <div>
-                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#333] bg-[#111] text-sm mb-8">
-                        <FaLayerGroup className="text-[#b9a0ff]" /> {ui.skills.badge}
-                    </div>
-                    <h2 className="text-4xl md:text-6xl font-bold leading-tight whitespace-pre-line">
+                    <h2 className="text-4xl min-[1025px]:text-6xl font-bold leading-tight whitespace-pre-line">
                         {ui.skills.title}
                     </h2>
                 </div>
