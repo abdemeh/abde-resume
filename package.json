@@ -1,7 +1,7 @@
 {
     "name": "abde-resume",
     "private": true,
-    "version": "0.0.0",
+    "version": "5.12.17",
     "type": "module",
     "homepage": "https://elmahdaoui.dev",
     "scripts": {
