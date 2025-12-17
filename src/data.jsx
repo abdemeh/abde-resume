@@ -126,18 +126,18 @@ export const data = {
         ],
         projects: [
             {
+                title: "Plateforme RGPD - Anonymisation de Données",
+                tags: ["Python", "Flask", "React", "TailwindCSS", "Pandas", "Numpy"],
+                description: "Développement d'une application web complète pour anonymiser des fichiers CSV via plusieurs méthodes (masquage, pseudonymisation, généralisation, perturbation, agrégation). Backend en Flask, frontend en React.js/TailwindCSS avec API REST.",
+                linkText: "Voir sur GitHub",
+                url: "https://github.com/abdemeh/PlateformeRGPD"
+            },
+            {
                 title: "Apex F1",
                 tags: ["React", "Vite", "i18next", "CSS Modules", "API"],
                 description: "Dashboard F1 moderne et réactif visualisant les statistiques en temps réel, les classements et les détails des pilotes. Esthétique premium 'Dark Neon' avec support bilingue.",
                 linkText: "Voir sur GitHub",
                 url: "https://github.com/abdemeh/apex-f1"
-            },
-            {
-                title: "CY-Books",
-                tags: ["Java", "GUI", "Management", "Algorithms"],
-                description: "Application de gestion de bibliothèque complète : gestion des utilisateurs, suivi des stocks, alertes de prêts et historique. Interface graphique intuitive pour bibliothécaires.",
-                linkText: "Voir sur GitHub",
-                url: "https://github.com/abdemeh/CY-Books"
             },
             {
                 title: "Projet de Gestion de Portefeuilles Financiers en Temps Réel",
@@ -147,11 +147,11 @@ export const data = {
                 url: "https://github.com/abdemeh/GestionPortefeuillesFinance"
             },
             {
-                title: "Plateforme RGPD - Anonymisation de Données",
-                tags: ["Python", "Flask", "React", "TailwindCSS", "Pandas", "Numpy"],
-                description: "Développement d'une application web complète pour anonymiser des fichiers CSV via plusieurs méthodes (masquage, pseudonymisation, généralisation, perturbation, agrégation). Backend en Flask, frontend en React.js/TailwindCSS avec API REST.",
+                title: "CY-Books",
+                tags: ["Java", "GUI", "Management", "Algorithms"],
+                description: "Application de gestion de bibliothèque complète : gestion des utilisateurs, suivi des stocks, alertes de prêts et historique. Interface graphique intuitive pour bibliothécaires.",
                 linkText: "Voir sur GitHub",
-                url: "https://github.com/abdemeh/PlateformeRGPD"
+                url: "https://github.com/abdemeh/CY-Books"
             },
             {
                 title: "Plateforme Universitaire",
@@ -277,18 +277,18 @@ export const data = {
         ],
         projects: [
             {
+                title: "GDPR Platform - Data Anonymization",
+                tags: ["Python", "Flask", "React", "TailwindCSS", "Pandas", "Numpy"],
+                description: "Development of a complete web application to anonymize CSV files via multiple methods (masking, pseudonymization, generalization, perturbation, aggregation). Flask backend, React.js/TailwindCSS frontend with REST API.",
+                linkText: "Open in GitHub",
+                url: "https://github.com/abdemeh/PlateformeRGPD"
+            },
+            {
                 title: "Apex F1",
                 tags: ["React 19", "Vite", "i18next", "CSS Modules", "API"],
                 description: "Modern, responsive F1 dashboard built to visualize stats, standings, and driver details in style. Features a premium 'Dark Neon' aesthetic and bilingual support.",
                 linkText: "Open in GitHub",
                 url: "https://github.com/abdemeh/apex-f1"
-            },
-            {
-                title: "CY-Books",
-                tags: ["Java", "GUI", "Management", "Algorithms"],
-                description: "Comprehensive library management application: user registration, book tracking, loan alerts, and history. User-friendly graphical interface designed for librarians.",
-                linkText: "Open in GitHub",
-                url: "https://github.com/abdemeh/CY-Books"
             },
             {
                 title: "Real-Time Financial Portfolio Management Project",
@@ -298,11 +298,11 @@ export const data = {
                 url: "https://github.com/abdemeh/GestionPortefeuillesFinance"
             },
             {
-                title: "GDPR Platform - Data Anonymization",
-                tags: ["Python", "Flask", "React", "TailwindCSS", "Pandas", "Numpy"],
-                description: "Development of a complete web application to anonymize CSV files via multiple methods (masking, pseudonymization, generalization, perturbation, aggregation). Flask backend, React.js/TailwindCSS frontend with REST API.",
+                title: "CY-Books",
+                tags: ["Java", "GUI", "Management", "Algorithms"],
+                description: "Comprehensive library management application: user registration, book tracking, loan alerts, and history. User-friendly graphical interface designed for librarians.",
                 linkText: "Open in GitHub",
-                url: "https://github.com/abdemeh/PlateformeRGPD"
+                url: "https://github.com/abdemeh/CY-Books"
             },
             {
                 title: "University Platform",

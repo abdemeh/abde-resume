@@ -30,7 +30,7 @@ const About = () => {
                     <div className="flex flex-col justify-between gap-8">
                         <div className="grid grid-cols-2 gap-6">
                             <div className="bg-[#1a1a1a] p-6 rounded-3xl border border-[#222]">
-                                <h4 className="text-4xl font-bold mb-2 text-[#b9a0ff]">3+</h4>
+                                <h4 className="text-4xl font-bold mb-2 text-[#b9a0ff]">1+</h4>
                                 <p className="text-gray-400 text-sm">{ui.about.experienceLabel}</p>
                             </div>
                             <div className="bg-[#1a1a1a] p-6 rounded-3xl border border-[#222]">
@@ -39,20 +39,20 @@ const About = () => {
                             </div>
                         </div>
 
-                        <div className="space-y-4 pt-8 border-t border-[#222]">
+                        {/* <div className="space-y-4 pt-8 border-t border-[#222]">
                             <div className="flex justify-between items-center text-sm">
                                 <span className="text-gray-500">Name</span>
                                 <span className="font-bold">{profile.name}</span>
                             </div>
                             <div className="flex justify-between items-center text-sm">
                                 <span className="text-gray-500">Email</span>
-                                <span className="font-bold">{profile.contact.email}</span>
+                                <span className="font-bold"><a href="mailto:{profile.contact.email}">{profile.contact.email}</a></span>
                             </div>
                             <div className="flex justify-between items-center text-sm">
                                 <span className="text-gray-500">Location</span>
                                 <span className="font-bold">{profile.contact.location}</span>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>

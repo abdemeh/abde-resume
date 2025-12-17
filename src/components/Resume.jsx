@@ -8,7 +8,7 @@ const ResumeItem = ({ title, subTitle, description, date }) => {
         <div className="group">
             <div className="flex flex-col min-[1090px]:flex-row gap-6 min-[1090px]:gap-10 p-8 rounded-3xl hover:bg-[#111] transition-colors border border-transparent hover:border-[#222]">
                 <div className="min-[1090px]:w-48 flex-shrink-0">
-                    <span className="inline-block px-4 py-2 rounded-full border border-[#333] text-sm text-gray-400 group-hover:text-white group-hover:border-[#555] transition-all">
+                    <span className="inline-block px-4 py-2 rounded-full border border-[#333] text-sm font-bold text-gray-400 group-hover:text-white group-hover:border-[#555] transition-all">
                         {date}
                     </span>
                 </div>

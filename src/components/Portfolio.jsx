@@ -22,7 +22,7 @@ const Portfolio = () => {
                                 <div>
                                     <div className="flex flex-wrap gap-2 mb-6">
                                         {project.tags.map((tag, i) => (
-                                            <span key={i} className="px-3 py-1 rounded-full text-xs font-medium bg-[#1a1a1a] border border-[#333] text-gray-400 group-hover:border-[#555] transition-colors">
+                                            <span key={i} className="px-3 py-1 rounded-full font-bold text-xs bg-[#1a1a1a] border border-[#333] text-gray-400 group-hover:border-[#555] transition-colors">
                                                 {tag}
                                             </span>
                                         ))}
