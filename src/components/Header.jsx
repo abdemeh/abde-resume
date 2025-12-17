@@ -56,25 +56,32 @@ const Header = () => {
             </nav>
 
 
-            {/* --- Desktop Layout (>= 1025px) --- */}
+            {/* --- Desktop Layout (>= 1090px) --- */}
 
-            <header className="hidden min-[1090px]:flex fixed top-0 left-0 right-0 z-50 items-center justify-between py-6 px-8 max-w-[1400px] mx-auto pointer-events-none">
+            <header className="hidden min-[1090px]:flex sticky top-8 z-50 items-center justify-between mb-12">
 
                 {/* Nav Pill: Always Text, Bold Mode */}
-                <nav className="pointer-events-auto flex items-center gap-8 text-md font-bold text-gray-400 bg-[#1a1a1a]/80 backdrop-blur-md px-8 py-4 rounded-full border border-[#222] shadow-2xl mx-auto transition-all duration-300">
+                <nav className="flex items-center gap-8 text-md font-bold text-gray-400 bg-[#1a1a1a]/80 backdrop-blur-md px-8 py-4 rounded-full border border-[#222] shadow-2xl transition-all duration-300">
                     {navItems.map((item, index) => (
                         <a
                             key={index}
                             href={item.href}
                             className="hover:text-white transition-colors"
                         >
-                            {item.label}
+                            {/* Icon for Compact Desktop (1090px - 1450px) */}
+                            <span className="block min-[1450px]:hidden text-xl">
+                                {item.icon}
+                            </span>
+                            {/* Text for Large Desktop (>= 1450px) */}
+                            <span className="hidden min-[1450px]:block">
+                                {item.label}
+                            </span>
                         </a>
                     ))}
                 </nav>
 
                 {/* Right Buttons Group */}
-                <div className="pointer-events-auto flex items-center gap-4 absolute right-8 top-6">
+                <div className="flex items-center gap-4">
                     <button
                         onClick={toggleLanguage}
                         className="flex items-center gap-2 px-6 py-3 text-gray-400 rounded-full bg-[#1a1a1a]/80 backdrop-blur-md border border-[#222] hover:bg-[#222] hover:text-white transition-all font-bold text-md"
