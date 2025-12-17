@@ -37,7 +37,7 @@ const Portfolio = () => {
                                     </p>
                                 </div>
                                 <div className="mt-auto">
-                                    <a href="#" className="inline-flex items-center gap-2 text-sm font-bold border-b border-transparent hover:border-white transition-all">
+                                    <a href={project.url} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-sm font-bold border-b border-transparent hover:border-white transition-all">
                                         {project.linkText} <span className="group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform">↗</span>
                                     </a>
                                 </div>

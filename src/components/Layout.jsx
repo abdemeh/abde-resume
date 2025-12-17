@@ -7,7 +7,7 @@ const Layout = ({ children }) => {
         <div className="min-h-screen bg-[#050505] text-white md:p-8 md:flex md:justify-center">
 
             {/* Boxed Wrapper for Desktop */}
-            <div className="flex flex-col md:flex-row gap-6 w-full max-w-[1600px]">
+            <div className="flex flex-col md:flex-row gap-6 w-full max-w-[1400px] relative z-10">
 
                 {/* Sidebar - Floating Card on Desktop */}
                 <aside className="w-full md:w-[380px] lg:w-[420px] flex-shrink-0 

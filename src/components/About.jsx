@@ -26,7 +26,7 @@ const About = () => {
                         <p className="text-gray-400 text-lg leading-relaxed">
                             {profile.longBio}
                         </p>
-                        <p className="text-gray-400 text-lg leading-relaxed">
+                        <p className="text-gray-400 text-lg italic leading-relaxed">
                             {ui.about.quote}
                         </p>
                     </div>
