@@ -3,7 +3,7 @@
     "private": true,
     "version": "0.0.0",
     "type": "module",
-    "homepage": "https://abdemeh.github.io/abde-resume",
+    "homepage": "https://elmahdaoui.dev",
     "scripts": {
         "dev": "vite",
         "build": "vite build",
