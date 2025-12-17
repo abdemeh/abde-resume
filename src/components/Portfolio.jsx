@@ -10,15 +10,15 @@ const Portfolio = () => {
         <Section id="portfolio">
             <div className="flex flex-col gap-16">
                 <div>
-                    <h2 className="text-4xl min-[1025px]:text-6xl font-bold max-w-4xl leading-tight whitespace-pre-line">
+                    <h2 className="text-4xl min-[1090px]:text-6xl font-bold max-w-4xl leading-tight whitespace-pre-line">
                         {ui.portfolio.title}
                     </h2>
                 </div>
 
-                <div className="grid min-[1025px]:grid-cols-2 gap-8">
+                <div className="grid min-[1090px]:grid-cols-2 gap-8">
                     {projects.map((project, index) => (
                         <div key={index} className="group relative bg-[#111] border border-[#222] rounded-[2rem] overflow-hidden hover:border-[#b9a0ff]/50 transition-all hover:shadow-[0_0_30px_rgba(185,160,255,0.1)]">
-                            <div className="p-8 min-[1025px]:p-10 h-full flex flex-col items-start min-h-[300px] justify-between z-10 relative">
+                            <div className="p-8 min-[1090px]:p-10 h-full flex flex-col items-start min-h-[300px] justify-between z-10 relative">
                                 <div>
                                     <div className="flex flex-wrap gap-2 mb-6">
                                         {project.tags.map((tag, i) => (

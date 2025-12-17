@@ -10,7 +10,7 @@ const Skills = () => {
         <Section id="skills">
             <div className="flex flex-col gap-10">
                 <div>
-                    <h2 className="text-4xl min-[1025px]:text-6xl font-bold leading-tight whitespace-pre-line">
+                    <h2 className="text-4xl min-[1090px]:text-6xl font-bold leading-tight whitespace-pre-line">
                         {ui.skills.title}
                     </h2>
                 </div>

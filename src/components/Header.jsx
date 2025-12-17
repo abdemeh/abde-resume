@@ -19,7 +19,7 @@ const Header = () => {
             {/* --- Mobile Layout (< 1025px) --- */}
 
             {/* Mobile Bottom Bar: Nav+Contact | Lang */}
-            <nav className="min-[1025px]:hidden fixed bottom-6 left-1/2 -translate-x-1/2 z-50 bg-[#1a1a1a]/80 backdrop-blur-xl border border-[#222] rounded-full px-6 py-4 shadow-2xl flex items-center gap-6">
+            <nav className="min-[1090px]:hidden fixed bottom-6 left-1/2 -translate-x-1/2 z-50 bg-[#1a1a1a]/80 backdrop-blur-xl border border-[#222] rounded-full px-6 py-4 shadow-2xl flex items-center gap-6">
 
                 {/* Left: Navigation Icons + Contact */}
                 <div className="flex items-center gap-5">
@@ -58,7 +58,7 @@ const Header = () => {
 
             {/* --- Desktop Layout (>= 1025px) --- */}
 
-            <header className="hidden min-[1025px]:flex fixed top-0 left-0 right-0 z-50 items-center justify-between py-6 px-8 max-w-[1400px] mx-auto pointer-events-none">
+            <header className="hidden min-[1090px]:flex fixed top-0 left-0 right-0 z-50 items-center justify-between py-6 px-8 max-w-[1400px] mx-auto pointer-events-none">
 
                 {/* Nav Pill: Always Text, Bold Mode */}
                 <nav className="pointer-events-auto flex items-center gap-8 text-md font-bold text-gray-400 bg-[#1a1a1a]/80 backdrop-blur-md px-8 py-4 rounded-full border border-[#222] shadow-2xl mx-auto transition-all duration-300">
