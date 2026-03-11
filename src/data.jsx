@@ -5,7 +5,7 @@ import { VscAzure } from "react-icons/vsc";
 import {
     SiJavascript, SiPython, SiC, SiCplusplus, SiR,
     SiScala, SiReact, SiAngular, SiHtml5, SiCss3, SiPhp, SiNodedotjs,
-    SiElectron, SiTailwindcss, SiOracle, SiGit, SiDocker, SiFirebase, SiGooglecloud, SiSalesforce,
+    SiElectron, SiTailwindcss, SiOracle, SiGit, SiDocker, SiFirebase, SiGooglecloud, SiTerraform,
     SiLinux, SiApple, SiSpring, SiMysql, SiMongodb, SiAdobephotoshop, SiAdobeillustrator, SiAdobepremierepro, SiFigma
 } from 'react-icons/si';
 
@@ -22,6 +22,7 @@ const skills = [
     { name: "AWS", icon: <FaAws />, color: "#FF9900" },
     { name: "Google Cloud", icon: <SiGooglecloud />, color: "#4285F4" },
     { name: "Azure", icon: <VscAzure />, color: "#0078D4" },
+    { name: "Terraform", icon: <SiTerraform />, color: "#7B42BC" },
     { name: "Docker", icon: <SiDocker />, color: "#2496ED" },
     { name: "Firebase", icon: <SiFirebase />, color: "#FFCA28" },
     { name: "Git", icon: <SiGit />, color: "#F05032" },
@@ -48,7 +49,6 @@ const skills = [
     { name: "C", icon: <SiC />, color: "#A8B9CC" },
     { name: "Electron", icon: <SiElectron />, color: "#47848F" },
     { name: "R", icon: <SiR />, color: "#276DC3" },
-    { name: "Salesforce", icon: <SiSalesforce />, color: "#00A1E0" },
     { name: "Windows", icon: <FaMicrosoft />, color: "#0078D6" },
     { name: "Mac OS", icon: <SiApple />, color: "#A2AAAD" },
     // 5. Design & Creative Tools
