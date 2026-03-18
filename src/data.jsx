@@ -19,43 +19,43 @@ const socialLinks = [
 
 const skills = [
     // 1. Cloud & DevOps (Specialty)
-    { name: "AWS", icon: <FaAws />, color: "#FF9900" },
-    { name: "Google Cloud", icon: <SiGooglecloud />, color: "#4285F4" },
-    { name: "Azure", icon: <VscAzure />, color: "#0078D4" },
-    { name: "Terraform", icon: <SiTerraform />, color: "#7B42BC" },
-    { name: "Docker", icon: <SiDocker />, color: "#2496ED" },
-    { name: "Firebase", icon: <SiFirebase />, color: "#FFCA28" },
-    { name: "Git", icon: <SiGit />, color: "#F05032" },
+    { name: "AWS", category: "cloud", icon: <FaAws />, color: "#FF9900" },
+    { name: "Google Cloud", category: "cloud", icon: <SiGooglecloud />, color: "#4285F4" },
+    { name: "Azure", category: "cloud", icon: <VscAzure />, color: "#0078D4" },
+    { name: "Terraform", category: "cloud", icon: <SiTerraform />, color: "#7B42BC" },
+    { name: "Docker", category: "cloud", icon: <SiDocker />, color: "#2496ED" },
+    { name: "Firebase", category: "cloud", icon: <SiFirebase />, color: "#FFCA28" },
+    { name: "Git", category: "cloud", icon: <SiGit />, color: "#F05032" },
     // 2. Backend Development
-    { name: "Java", icon: <FaJava />, color: "#007396" },
-    { name: "Spring", icon: <SiSpring />, color: "#6DB33F" },
-    { name: "Oracle", icon: <SiOracle />, color: "#F80000" },
-    { name: "MySQL", icon: <SiMysql />, color: "#00758F" },
-    { name: "MongoDB", icon: <SiMongodb />, color: "#47A248" },
-    { name: "Node.js", icon: <SiNodedotjs />, color: "#339933" },
-    { name: "Scala", icon: <SiScala />, color: "#DC322F" },
-    { name: "PHP", icon: <SiPhp />, color: "#777BB4" },
+    { name: "Java", category: "backend", icon: <FaJava />, color: "#007396" },
+    { name: "Spring", category: "backend", icon: <SiSpring />, color: "#6DB33F" },
+    { name: "Oracle", category: "backend", icon: <SiOracle />, color: "#F80000" },
+    { name: "MySQL", category: "backend", icon: <SiMysql />, color: "#00758F" },
+    { name: "MongoDB", category: "backend", icon: <SiMongodb />, color: "#47A248" },
+    { name: "Node.js", category: "backend", icon: <SiNodedotjs />, color: "#339933" },
+    { name: "Scala", category: "backend", icon: <SiScala />, color: "#DC322F" },
+    { name: "PHP", category: "backend", icon: <SiPhp />, color: "#777BB4" },
     // 3. Frontend Development
-    { name: "React", icon: <SiReact />, color: "#61DAFB" },
-    { name: "Angular", icon: <SiAngular />, color: "#DD0031" },
-    { name: "JavaScript", icon: <SiJavascript />, color: "#F7DF1E" },
-    { name: "Tailwind CSS", icon: <SiTailwindcss />, color: "#06B6D4" },
-    { name: "HTML", icon: <SiHtml5 />, color: "#E34F26" },
-    { name: "CSS", icon: <SiCss3 />, color: "#1572B6" },
+    { name: "React", category: "frontend", icon: <SiReact />, color: "#61DAFB" },
+    { name: "Angular", category: "frontend", icon: <SiAngular />, color: "#DD0031" },
+    { name: "JavaScript", category: "frontend", icon: <SiJavascript />, color: "#F7DF1E" },
+    { name: "Tailwind CSS", category: "frontend", icon: <SiTailwindcss />, color: "#06B6D4" },
+    { name: "HTML", category: "frontend", icon: <SiHtml5 />, color: "#E34F26" },
+    { name: "CSS", category: "frontend", icon: <SiCss3 />, color: "#1572B6" },
     // 4. Programming Languages & Platforms
-    { name: "Linux", icon: <SiLinux />, color: "#FCC624" },
-    { name: "Python", icon: <SiPython />, color: "#3776AB" },
-    { name: "C++", icon: <SiCplusplus />, color: "#00599C" },
-    { name: "C", icon: <SiC />, color: "#A8B9CC" },
-    { name: "Electron", icon: <SiElectron />, color: "#47848F" },
-    { name: "R", icon: <SiR />, color: "#276DC3" },
-    { name: "Windows", icon: <FaMicrosoft />, color: "#0078D6" },
-    { name: "Mac OS", icon: <SiApple />, color: "#A2AAAD" },
+    { name: "Linux", category: "systems", icon: <SiLinux />, color: "#FCC624" },
+    { name: "Python", category: "systems", icon: <SiPython />, color: "#3776AB" },
+    { name: "C++", category: "systems", icon: <SiCplusplus />, color: "#00599C" },
+    { name: "C", category: "systems", icon: <SiC />, color: "#A8B9CC" },
+    { name: "Electron", category: "systems", icon: <SiElectron />, color: "#47848F" },
+    { name: "R", category: "systems", icon: <SiR />, color: "#276DC3" },
+    { name: "Windows", category: "systems", icon: <FaMicrosoft />, color: "#0078D6" },
+    { name: "Mac OS", category: "systems", icon: <SiApple />, color: "#A2AAAD" },
     // 5. Design & Creative Tools
-    { name: "Figma", icon: <SiFigma />, color: "#ff7262" },
-    { name: "Adobe Photoshop", icon: <SiAdobephotoshop />, color: "#3da1e9ff" },
-    { name: "Adobe Illustrator", icon: <SiAdobeillustrator />, color: "#e69926ff" },
-    { name: "Adobe Premiere Pro", icon: <SiAdobepremierepro />, color: "#954ed7ff" }
+    { name: "Figma", category: "design", icon: <SiFigma />, color: "#ff7262" },
+    { name: "Adobe Photoshop", category: "design", icon: <SiAdobephotoshop />, color: "#3da1e9ff" },
+    { name: "Adobe Illustrator", category: "design", icon: <SiAdobeillustrator />, color: "#e69926ff" },
+    { name: "Adobe Premiere Pro", category: "design", icon: <SiAdobepremierepro />, color: "#954ed7ff" }
 ];
 
 export const data = {
@@ -206,7 +206,14 @@ export const data = {
             },
             skills: {
                 badge: "Compétences",
-                title: "Outils & \n Tech"
+                title: "Outils & \n Tech",
+                categories: {
+                    cloud: "Cloud & DevOps",
+                    backend: "Backend",
+                    frontend: "Frontend",
+                    systems: "Langages & Systèmes",
+                    design: "Design"
+                }
             }
         }
     },
@@ -357,7 +364,14 @@ export const data = {
             },
             skills: {
                 badge: "Skills",
-                title: "Tools & \n Tech"
+                title: "Tools & \n Tech",
+                categories: {
+                    cloud: "Cloud & DevOps",
+                    backend: "Backend",
+                    frontend: "Frontend",
+                    systems: "Languages & Systems",
+                    design: "Design"
+                }
             }
         }
     }
