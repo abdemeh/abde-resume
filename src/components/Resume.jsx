@@ -6,16 +6,16 @@ import { FaGraduationCap, FaBriefcase } from "react-icons/fa6";
 const ResumeItem = ({ title, subTitle, description, date }) => {
     return (
         <div className="group">
-            <div className="flex flex-col min-[1090px]:flex-row gap-6 min-[1090px]:gap-10 p-8 rounded-3xl hover:bg-[#111] transition-colors border border-transparent hover:border-[#222]">
+            <div className="flex flex-col min-[1090px]:flex-row gap-6 min-[1090px]:gap-10 p-8 rounded-3xl hover:bg-[var(--surface-1)] transition-colors border border-transparent hover:border-[var(--border-color)]">
                 <div className="min-[1090px]:w-48 flex-shrink-0">
-                    <span className="inline-block px-4 py-2 rounded-full border border-[#333] text-sm font-bold text-gray-400 group-hover:text-white group-hover:border-[#555] transition-all">
+                    <span className="inline-block px-4 py-2 rounded-full border border-[var(--border-strong)] text-sm font-bold text-[var(--text-muted)] group-hover:text-[var(--text-primary)] group-hover:border-[var(--text-soft)] transition-all">
                         {date}
                     </span>
                 </div>
                 <div>
-                    <h3 className="text-2xl font-bold mb-2 text-white">{title}</h3>
+                    <h3 className="text-2xl font-bold mb-2 text-[var(--text-primary)]">{title}</h3>
                     <p className="text-[#b9a0ff] mb-4 font-medium">{subTitle}</p>
-                    <p className="text-gray-400 leading-relaxed text-sm min-[1090px]:text-base">{description}</p>
+                    <p className="text-[var(--text-muted)] leading-relaxed text-sm min-[1090px]:text-base">{description}</p>
                 </div>
             </div>
         </div>
@@ -35,7 +35,7 @@ const Resume = () => {
             <div className="flex flex-col gap-20">
                 <div>
                     <h3 className="text-3xl font-bold mb-10 flex items-center gap-4">
-                        <span className="w-12 h-12 rounded-full bg-[#1a1a1a] border border-[#333] flex items-center justify-center text-[#b9a0ff] text-xl">
+                        <span className="w-12 h-12 rounded-full bg-[var(--surface-2)] border border-[var(--border-strong)] flex items-center justify-center text-[#b9a0ff] text-xl">
                             <FaGraduationCap />
                         </span>
                         {ui.resume.educationTitle}
@@ -55,7 +55,7 @@ const Resume = () => {
 
                 <div>
                     <h3 className="text-3xl font-bold mb-10 flex items-center gap-4">
-                        <span className="w-12 h-12 rounded-full bg-[#1a1a1a] border border-[#333] flex items-center justify-center text-[#b9a0ff] text-xl">
+                        <span className="w-12 h-12 rounded-full bg-[var(--surface-2)] border border-[var(--border-strong)] flex items-center justify-center text-[#b9a0ff] text-xl">
                             <FaBriefcase />
                         </span>
                         {ui.resume.experienceTitle}

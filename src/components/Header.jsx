@@ -1,10 +1,17 @@
 
 import { useLanguage } from '../context/LanguageContext';
+import { useTheme } from '../context/ThemeContext';
 import { LuMessageSquareText } from 'react-icons/lu';
-import { HiHome, HiUser, HiDocumentText, HiBriefcase, HiLightningBolt } from "react-icons/hi";
+import { HiHome, HiUser, HiDocumentText, HiBriefcase, HiLightningBolt, HiMoon, HiSun } from "react-icons/hi";
 
 const Header = () => {
     const { language, toggleLanguage, currentData } = useLanguage();
+    const { theme, toggleTheme } = useTheme();
+    const isDarkTheme = theme === 'dark';
+
+    const themeToggleLabel = language === 'fr'
+        ? (isDarkTheme ? 'Passer en mode clair' : 'Passer en mode sombre')
+        : (isDarkTheme ? 'Switch to light mode' : 'Switch to dark mode');
 
     const navItems = [
         { href: "#home", label: currentData.ui.nav.home, icon: <HiHome className="text-xl" /> },
@@ -19,7 +26,7 @@ const Header = () => {
             {/* --- Mobile Layout (< 1025px) --- */}
 
             {/* Mobile Bottom Bar: Nav+Contact | Lang */}
-            <nav className="min-[1090px]:hidden fixed bottom-6 left-1/2 -translate-x-1/2 z-50 bg-[#1a1a1a]/80 backdrop-blur-xl border border-[#222] rounded-full px-6 py-4 shadow-2xl flex items-center gap-6">
+            <nav className="min-[1090px]:hidden fixed bottom-6 left-1/2 -translate-x-1/2 z-50 bg-[var(--glass-bg)] backdrop-blur-xl border border-[var(--glass-border)] rounded-full px-6 py-4 shadow-2xl flex items-center gap-6 transition-colors duration-300">
 
                 {/* Left: Navigation Icons + Contact */}
                 <div className="flex items-center gap-5">
@@ -27,7 +34,7 @@ const Header = () => {
                         <a
                             key={index}
                             href={item.href}
-                            className="text-gray-400 hover:text-white transition-all"
+                            className="text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-all"
                             aria-label={item.label}
                         >
                             {item.icon}
@@ -36,7 +43,7 @@ const Header = () => {
                     {/* Contact Icon as part of Nav */}
                     <a
                         href="#contact"
-                        className="text-gray-400 hover:text-white transition-all"
+                        className="text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-all"
                         aria-label="Contact"
                     >
                         <LuMessageSquareText className="text-xl" />
@@ -44,14 +51,25 @@ const Header = () => {
                 </div>
 
                 {/* Separator */}
-                <div className="w-[1px] h-5 bg-[#444]"></div>
+                <div className="w-[1px] h-5 bg-[var(--border-strong)]"></div>
 
                 {/* Right: Language Text Toggle */}
                 <button
                     onClick={toggleLanguage}
-                    className="text-gray-400 font-bold text-sm hover:text-white transition-colors"
+                    className="text-[var(--text-muted)] font-bold text-sm hover:text-[var(--text-primary)] transition-colors"
                 >
                     {language === 'fr' ? 'EN' : 'FR'}
+                </button>
+
+                <div className="w-[1px] h-5 bg-[var(--border-strong)]"></div>
+
+                <button
+                    onClick={toggleTheme}
+                    className="text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors"
+                    aria-label={themeToggleLabel}
+                    title={themeToggleLabel}
+                >
+                    {isDarkTheme ? <HiSun className="text-xl" /> : <HiMoon className="text-xl" />}
                 </button>
             </nav>
 
@@ -61,12 +79,12 @@ const Header = () => {
             <header className="hidden min-[1090px]:flex sticky top-8 z-50 items-center justify-between mb-12">
 
                 {/* Nav Pill: Always Text, Bold Mode */}
-                <nav className="flex items-center gap-8 text-md font-bold text-gray-400 bg-[#1a1a1a]/80 backdrop-blur-md px-8 py-4 rounded-full border border-[#222] shadow-2xl transition-all duration-300">
+                <nav className="flex items-center gap-8 text-md font-bold text-[var(--text-muted)] bg-[var(--glass-bg)] backdrop-blur-md px-8 py-4 rounded-full border border-[var(--glass-border)] shadow-2xl transition-all duration-300">
                     {navItems.map((item, index) => (
                         <a
                             key={index}
                             href={item.href}
-                            className="hover:text-white transition-colors"
+                            className="inline-flex items-center whitespace-nowrap hover:text-[var(--text-primary)] transition-colors"
                         >
                             {/* Icon for Compact Desktop (1090px - 1450px) */}
                             <span className="block min-[1450px]:hidden text-xl">
@@ -81,16 +99,24 @@ const Header = () => {
                 </nav>
 
                 {/* Right Buttons Group */}
-                <div className="flex items-center gap-4">
+                <div className="ml-10 flex items-center gap-2">
                     <button
                         onClick={toggleLanguage}
-                        className="flex items-center gap-2 px-6 py-3 text-gray-400 rounded-full bg-[#1a1a1a]/80 backdrop-blur-md border border-[#222] hover:bg-[#222] hover:text-white transition-all font-bold text-md"
+                        className="flex items-center gap-2 px-6 py-3 text-[var(--text-muted)] rounded-full bg-[var(--glass-bg)] backdrop-blur-md border border-[var(--glass-border)] hover:bg-[var(--surface-2)] hover:text-[var(--text-primary)] transition-all font-bold text-md"
                     >
                         {language === 'fr' ? 'EN' : 'FR'}
                     </button>
+                    <button
+                        onClick={toggleTheme}
+                        className="flex items-center gap-2 px-4 py-3 text-[var(--text-muted)] rounded-full bg-[var(--glass-bg)] backdrop-blur-md border border-[var(--glass-border)] hover:bg-[var(--surface-2)] hover:text-[var(--text-primary)] transition-all font-bold text-md"
+                        aria-label={themeToggleLabel}
+                        title={themeToggleLabel}
+                    >
+                        {isDarkTheme ? <HiSun className="text-xl" /> : <HiMoon className="text-xl" />}
+                    </button>
                     <a
                         href="#contact"
-                        className="flex items-center gap-2 px-6 py-3 rounded-full bg-white text-black font-bold hover:bg-gray-200 transition-colors shadow-lg"
+                        className="flex items-center gap-2 px-6 py-3 rounded-full bg-[var(--button-primary-bg)] text-[var(--button-primary-text)] font-bold hover:bg-[var(--button-primary-hover)] transition-colors shadow-lg"
                     >
                         {currentData.ui.header.letsTalk} <LuMessageSquareText className="text-xl" />
                     </a>

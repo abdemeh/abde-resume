@@ -2,7 +2,6 @@
 import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import profileImg from '../assets/images/profile.png';
-import { FaCode } from "react-icons/fa6";
 
 const Sidebar = () => {
     const { currentData } = useLanguage();
@@ -13,26 +12,26 @@ const Sidebar = () => {
             {/* Header / Profile Info */}
             <div>
                 <div className="flex items-center gap-3 mb-10">
-                    <h1 className="text-3xl font-extrabold tracking-tight">
+                    <h1 className="text-3xl font-extrabold tracking-tight text-[var(--text-primary)] transition-none">
                         {profile.name.split(' ')[0]}
-                        <span className="block text-gray-400 font-extrabold text-3xl">{profile.name.split(' ').slice(1).join(' ')}</span>
+                        <span className="block text-[var(--text-muted)] font-extrabold text-3xl transition-none">{profile.name.split(' ').slice(1).join(' ')}</span>
                     </h1>
                 </div>
 
                 <div className="mb-8">
-                    <div className="aspect-square rounded-[2rem] overflow-hidden mb-6 border border-[#222] shadow-2xl">
+                    <div className="aspect-square rounded-[2rem] overflow-hidden mb-6 border border-[var(--border-color)] shadow-2xl transition-colors duration-300">
                         <img src={profileImg} alt={profile.name} className="w-full h-full object-cover" />
                     </div>
                 </div>
 
                 <div className="mb-10 text-center md:text-left">
-                    <p className="text-gray-400 text-sm mb-2">{profile.specializationLabel}</p>
-                    <p className="font-bold text-white text-lg leading-tight mb-6 whitespace-pre-line">
+                    <p className="text-[var(--text-muted)] text-sm mb-2">{profile.specializationLabel}</p>
+                    <p className="font-bold text-[var(--text-primary)] text-lg leading-tight mb-6 whitespace-pre-line">
                         {profile.specialization}
                     </p>
 
-                    <p className="text-gray-400 text-sm mb-2">{profile.locationLabel}</p>
-                    <p className="font-bold text-white text-lg">{profile.contact.location}</p>
+                    <p className="text-[var(--text-muted)] text-sm mb-2">{profile.locationLabel}</p>
+                    <p className="font-bold text-[var(--text-primary)] text-lg">{profile.contact.location}</p>
                 </div>
             </div>
 
@@ -44,7 +43,7 @@ const Sidebar = () => {
                         href={social.url}
                         target="_blank"
                         rel="noreferrer"
-                        className="text-gray-400 hover:text-white text-2xl transition-colors"
+                        className="text-[var(--text-muted)] hover:text-[var(--text-primary)] text-2xl transition-colors"
                     >
                         {social.icon}
                     </a>

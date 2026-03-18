@@ -53,8 +53,8 @@ const Skills = () => {
                                 onClick={() => setActiveCategory(categoryKey)}
                                 className={`px-4 py-2 rounded-full border text-sm font-semibold transition-all duration-300 ${
                                     isActive
-                                        ? 'bg-white text-black border-white'
-                                        : 'bg-[#111] text-gray-300 border-[#2c2c2c] hover:border-[#555] hover:text-white'
+                                        ? 'bg-[var(--button-primary-bg)] text-[var(--button-primary-text)] border-[var(--button-primary-bg)]'
+                                        : 'bg-[var(--surface-1)] text-[var(--text-muted)] border-[var(--border-color)] hover:border-[var(--border-strong)] hover:text-[var(--text-primary)]'
                                 }`}
                             >
                                 {categoryLabel}
@@ -65,9 +65,9 @@ const Skills = () => {
 
                 <div key={activeCategory || 'all'} className="flex flex-wrap gap-4 skills-grid-reveal">
                     {visibleSkills.map((skill) => (
-                        <div key={skill.name} className="flex items-center gap-3 px-6 py-4 rounded-2xl bg-[#111] border border-[#222] hover:border-[#444] transition-all group">
+                        <div key={skill.name} className="flex items-center gap-3 px-6 py-4 rounded-2xl bg-[var(--surface-1)] border border-[var(--border-color)] hover:border-[var(--border-strong)] transition-all duration-300 group">
                             <span className="text-2xl group-hover:scale-110 transition-transform" style={{ color: skill.color }}>{skill.icon}</span>
-                            <span className="font-bold text-gray-300 group-hover:text-white transition-colors">{skill.name}</span>
+                            <span className="font-bold text-[var(--text-muted)] group-hover:text-[var(--text-primary)] transition-colors">{skill.name}</span>
                         </div>
                     ))}
                 </div>
