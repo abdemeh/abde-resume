@@ -1,4 +1,5 @@
 
+import { useEffect, useMemo, useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { useTheme } from '../context/ThemeContext';
 import { LuMessageSquareText } from 'react-icons/lu';
@@ -13,13 +14,44 @@ const Header = () => {
         ? (isDarkTheme ? 'Passer en mode clair' : 'Passer en mode sombre')
         : (isDarkTheme ? 'Switch to light mode' : 'Switch to dark mode');
 
-    const navItems = [
+    const navItems = useMemo(() => ([
         { href: "#home", label: currentData.ui.nav.home, icon: <HiHome className="text-xl" /> },
         { href: "#portfolio", label: currentData.ui.nav.portfolio, icon: <HiBriefcase className="text-xl" /> },
         { href: "#about", label: currentData.ui.nav.about, icon: <HiUser className="text-xl" /> },
         { href: "#resume", label: currentData.ui.nav.resume, icon: <HiDocumentText className="text-xl" /> },
         { href: "#skills", label: currentData.ui.skills.badge, icon: <HiLightningBolt className="text-xl" /> },
-    ];
+    ]), [currentData]);
+
+    const [activeSection, setActiveSection] = useState('home');
+
+    useEffect(() => {
+        const syncActiveSection = () => {
+            const viewportMarker = window.scrollY + (window.innerHeight * 0.35);
+            let nextActiveSection = navItems[0]?.href.replace('#', '') || 'home';
+
+            navItems.forEach((item) => {
+                const sectionId = item.href.replace('#', '');
+                const sectionElement = document.getElementById(sectionId);
+
+                if (sectionElement && viewportMarker >= sectionElement.offsetTop - 1) {
+                    nextActiveSection = sectionId;
+                }
+            });
+
+            setActiveSection((previousSection) => {
+                return previousSection === nextActiveSection ? previousSection : nextActiveSection;
+            });
+        };
+
+        syncActiveSection();
+        window.addEventListener('scroll', syncActiveSection, { passive: true });
+        window.addEventListener('resize', syncActiveSection);
+
+        return () => {
+            window.removeEventListener('scroll', syncActiveSection);
+            window.removeEventListener('resize', syncActiveSection);
+        };
+    }, [navItems]);
 
     return (
         <>
@@ -30,16 +62,26 @@ const Header = () => {
 
                 {/* Left: Navigation Icons + Contact */}
                 <div className="flex items-center gap-5">
-                    {navItems.map((item, index) => (
-                        <a
-                            key={index}
-                            href={item.href}
-                            className="text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-all"
-                            aria-label={item.label}
-                        >
-                            {item.icon}
-                        </a>
-                    ))}
+                    {navItems.map((item, index) => {
+                        const sectionId = item.href.replace('#', '');
+                        const isActive = sectionId === activeSection;
+
+                        return (
+                            <a
+                                key={index}
+                                href={item.href}
+                                className={`transition-all ${
+                                    isActive
+                                        ? 'text-[var(--text-primary)]'
+                                        : 'text-[var(--text-muted)] hover:text-[var(--text-primary)]'
+                                }`}
+                                aria-label={item.label}
+                                aria-current={isActive ? 'page' : undefined}
+                            >
+                                {item.icon}
+                            </a>
+                        );
+                    })}
                     {/* Contact Icon as part of Nav */}
                     <a
                         href="#contact"
@@ -80,22 +122,32 @@ const Header = () => {
 
                 {/* Nav Pill: Always Text, Bold Mode */}
                 <nav className="flex items-center gap-8 text-md font-bold text-[var(--text-muted)] bg-[var(--glass-bg)] backdrop-blur-md px-8 py-4 rounded-full border border-[var(--glass-border)] shadow-2xl transition-all duration-300">
-                    {navItems.map((item, index) => (
-                        <a
-                            key={index}
-                            href={item.href}
-                            className="inline-flex items-center whitespace-nowrap hover:text-[var(--text-primary)] transition-colors"
-                        >
-                            {/* Icon for Compact Desktop (1090px - 1450px) */}
-                            <span className="block min-[1450px]:hidden text-xl">
-                                {item.icon}
-                            </span>
-                            {/* Text for Large Desktop (>= 1450px) */}
-                            <span className="hidden min-[1450px]:block">
-                                {item.label}
-                            </span>
-                        </a>
-                    ))}
+                    {navItems.map((item, index) => {
+                        const sectionId = item.href.replace('#', '');
+                        const isActive = sectionId === activeSection;
+
+                        return (
+                            <a
+                                key={index}
+                                href={item.href}
+                                className={`inline-flex items-center whitespace-nowrap transition-colors ${
+                                    isActive
+                                        ? 'text-[var(--text-primary)]'
+                                        : 'text-[var(--text-muted)] hover:text-[var(--text-primary)]'
+                                }`}
+                                aria-current={isActive ? 'page' : undefined}
+                            >
+                                {/* Icon for Compact Desktop (1090px - 1450px) */}
+                                <span className="block min-[1450px]:hidden text-xl">
+                                    {item.icon}
+                                </span>
+                                {/* Text for Large Desktop (>= 1450px) */}
+                                <span className="hidden min-[1450px]:block">
+                                    {item.label}
+                                </span>
+                            </a>
+                        );
+                    })}
                 </nav>
 
                 {/* Right Buttons Group */}
