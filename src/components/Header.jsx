@@ -102,13 +102,13 @@ const Header = () => {
                 <div className="ml-10 flex items-center gap-2">
                     <button
                         onClick={toggleLanguage}
-                        className="flex items-center gap-2 px-6 py-3 text-[var(--text-muted)] rounded-full bg-[var(--glass-bg)] backdrop-blur-md border border-[var(--glass-border)] hover:bg-[var(--surface-2)] hover:text-[var(--text-primary)] transition-all font-bold text-md"
+                        className="flex h-12 items-center gap-2 px-6 py-3 text-[var(--text-muted)] rounded-full bg-[var(--glass-bg)] backdrop-blur-md border border-[var(--glass-border)] hover:bg-[var(--surface-2)] hover:text-[var(--text-primary)] transition-all font-bold text-md"
                     >
                         {language === 'fr' ? 'EN' : 'FR'}
                     </button>
                     <button
                         onClick={toggleTheme}
-                        className="flex items-center gap-2 px-4 py-3 text-[var(--text-muted)] rounded-full bg-[var(--glass-bg)] backdrop-blur-md border border-[var(--glass-border)] hover:bg-[var(--surface-2)] hover:text-[var(--text-primary)] transition-all font-bold text-md"
+                        className="flex h-12 items-center gap-2 px-4 py-3 text-[var(--text-muted)] rounded-full bg-[var(--glass-bg)] backdrop-blur-md border border-[var(--glass-border)] hover:bg-[var(--surface-2)] hover:text-[var(--text-primary)] transition-all font-bold text-md"
                         aria-label={themeToggleLabel}
                         title={themeToggleLabel}
                     >
@@ -116,7 +116,7 @@ const Header = () => {
                     </button>
                     <a
                         href="#contact"
-                        className="flex items-center gap-2 px-6 py-3 rounded-full bg-[var(--button-primary-bg)] text-[var(--button-primary-text)] font-bold hover:bg-[var(--button-primary-hover)] transition-colors shadow-lg"
+                        className="flex h-12 items-center gap-2 px-6 py-3 rounded-full bg-[var(--button-primary-bg)] text-[var(--button-primary-text)] font-bold hover:bg-[var(--button-primary-hover)] transition-colors shadow-lg"
                     >
                         {currentData.ui.header.letsTalk} <LuMessageSquareText className="text-xl" />
                     </a>
