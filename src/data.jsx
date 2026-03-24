@@ -69,11 +69,11 @@ export const data = {
             locationLabel: "Basé à:",
             specializationLabel: "Spécialisation:",
             contact: {
-                address: "200 Av. Jean Mermoz, 64000 Pau",
+                address: "Talence, France",
                 email: "elmahdaoui@cy-tech.fr",
                 phone: "+33 7 66 10 30 72",
                 github: "github.com/abdemeh",
-                location: "Pau, France"
+                location: "Talence, France"
             },
             social: socialLinks
         },
@@ -227,11 +227,11 @@ export const data = {
             locationLabel: "Based in:",
             specializationLabel: "Specialization:",
             contact: {
-                address: "200 Av. Jean Mermoz, 64000 Pau",
+                address: "Talence, France",
                 email: "elmahdaoui@cy-tech.fr",
                 phone: "+33 7 66 10 30 72",
                 github: "github.com/abdemeh",
-                location: "Pau, France"
+                location: "Talence, France"
             },
             social: socialLinks
         },
