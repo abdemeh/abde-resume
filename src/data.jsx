@@ -89,7 +89,7 @@ export const data = {
         skills: skills,
         experience: [
             {
-                period: "Mars 2026",
+                period: "Mars 2026 - Présent",
                 title: "Développeur d'Application (Stage)",
                 company: "Atos Pessac, France",
                 description: "Contribution au développement d'un CRM pour O2. Participation au développement frontend (Angular) et backend (Spring), avec intégration de services AWS (Polly, Transcribe, S3)."
@@ -254,7 +254,7 @@ export const data = {
         skills: skills,
         experience: [
             {
-                period: "March 2026",
+                period: "March 2026 - Now",
                 title: "Application Developer (Internship)",
                 company: "Atos Pessac, France",
                 description: "Contributing to the development of a CRM for O2. Involved in frontend (Angular) and backend (Spring) development, with integration of AWS services (Polly, Transcribe, S3)."
