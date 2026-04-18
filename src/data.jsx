@@ -6,7 +6,8 @@ import {
     SiJavascript, SiPython, SiC, SiCplusplus, SiR,
     SiScala, SiReact, SiAngular, SiHtml5, SiCss3, SiPhp, SiNodedotjs,
     SiElectron, SiTailwindcss, SiOracle, SiGit, SiDocker, SiFirebase, SiGooglecloud, SiTerraform,
-    SiLinux, SiApple, SiSpring, SiMysql, SiMongodb, SiAdobephotoshop, SiAdobeillustrator, SiAdobepremierepro, SiFigma
+    SiLinux, SiApple, SiSpring, SiMysql, SiMongodb, SiAdobephotoshop, SiAdobeillustrator, SiAdobepremierepro, SiFigma,
+    SiJira, SiConfluence, SiGitlab
 } from 'react-icons/si';
 
 const socialLinks = [
@@ -18,40 +19,48 @@ const socialLinks = [
 ];
 
 const skills = [
-    // 1. Cloud & DevOps (Specialty)
-    { name: "AWS", category: "cloud", icon: <FaAws />, color: "#FF9900" },
-    { name: "Google Cloud", category: "cloud", icon: <SiGooglecloud />, color: "#4285F4" },
-    { name: "Azure", category: "cloud", icon: <VscAzure />, color: "#0078D4" },
-    { name: "Terraform", category: "cloud", icon: <SiTerraform />, color: "#7B42BC" },
-    { name: "Docker", category: "cloud", icon: <SiDocker />, color: "#2496ED" },
-    { name: "Firebase", category: "cloud", icon: <SiFirebase />, color: "#FFCA28" },
-    { name: "Git", category: "cloud", icon: <SiGit />, color: "#F05032" },
-    // 2. Backend Development
-    { name: "Java", category: "backend", icon: <FaJava />, color: "#007396" },
+    // 1. Languages
+    { name: "Java", category: "languages", icon: <FaJava />, color: "#007396" },
+    { name: "Python", category: "languages", icon: <SiPython />, color: "#3776AB" },
+    { name: "C++", category: "languages", icon: <SiCplusplus />, color: "#00599C" },
+    { name: "C", category: "languages", icon: <SiC />, color: "#A8B9CC" },
+    { name: "R", category: "languages", icon: <SiR />, color: "#276DC3" },
+    { name: "Scala", category: "languages", icon: <SiScala />, color: "#DC322F" },
+    { name: "JavaScript", category: "languages", icon: <SiJavascript />, color: "#F7DF1E" },
+    { name: "PHP", category: "languages", icon: <SiPhp />, color: "#777BB4" },
+
+    // 2. Frontend
+    { name: "React", category: "frontend", icon: <SiReact />, color: "#61DAFB" },
+    { name: "Angular", category: "frontend", icon: <SiAngular />, color: "#DD0031" },
+    { name: "HTML", category: "frontend", icon: <SiHtml5 />, color: "#E34F26" },
+    { name: "CSS", category: "frontend", icon: <SiCss3 />, color: "#1572B6" },
+    { name: "Tailwind CSS", category: "frontend", icon: <SiTailwindcss />, color: "#06B6D4" },
+    { name: "Electron", category: "frontend", icon: <SiElectron />, color: "#47848F" },
+
+    // 3. Backend & Databases
     { name: "Spring", category: "backend", icon: <SiSpring />, color: "#6DB33F" },
+    { name: "Node.js", category: "backend", icon: <SiNodedotjs />, color: "#339933" },
     { name: "Oracle", category: "backend", icon: <SiOracle />, color: "#F80000" },
     { name: "MySQL", category: "backend", icon: <SiMysql />, color: "#00758F" },
     { name: "MongoDB", category: "backend", icon: <SiMongodb />, color: "#47A248" },
-    { name: "Node.js", category: "backend", icon: <SiNodedotjs />, color: "#339933" },
-    { name: "Scala", category: "backend", icon: <SiScala />, color: "#DC322F" },
-    { name: "PHP", category: "backend", icon: <SiPhp />, color: "#777BB4" },
-    // 3. Frontend Development
-    { name: "React", category: "frontend", icon: <SiReact />, color: "#61DAFB" },
-    { name: "Angular", category: "frontend", icon: <SiAngular />, color: "#DD0031" },
-    { name: "JavaScript", category: "frontend", icon: <SiJavascript />, color: "#F7DF1E" },
-    { name: "Tailwind CSS", category: "frontend", icon: <SiTailwindcss />, color: "#06B6D4" },
-    { name: "HTML", category: "frontend", icon: <SiHtml5 />, color: "#E34F26" },
-    { name: "CSS", category: "frontend", icon: <SiCss3 />, color: "#1572B6" },
-    // 4. Programming Languages & Platforms
-    { name: "Linux", category: "systems", icon: <SiLinux />, color: "#FCC624" },
-    { name: "Python", category: "systems", icon: <SiPython />, color: "#3776AB" },
-    { name: "C++", category: "systems", icon: <SiCplusplus />, color: "#00599C" },
-    { name: "C", category: "systems", icon: <SiC />, color: "#A8B9CC" },
-    { name: "Electron", category: "systems", icon: <SiElectron />, color: "#47848F" },
-    { name: "R", category: "systems", icon: <SiR />, color: "#276DC3" },
-    { name: "Windows", category: "systems", icon: <FaMicrosoft />, color: "#0078D6" },
-    { name: "Mac OS", category: "systems", icon: <SiApple />, color: "#A2AAAD" },
-    // 5. Design & Creative Tools
+
+    // 4. Cloud & DevOps
+    { name: "AWS", category: "cloud", icon: <FaAws />, color: "#FF9900" },
+    { name: "Google Cloud", category: "cloud", icon: <SiGooglecloud />, color: "#4285F4" },
+    { name: "Azure", category: "cloud", icon: <VscAzure />, color: "#0078D4" },
+    { name: "Docker", category: "cloud", icon: <SiDocker />, color: "#2496ED" },
+    { name: "Terraform", category: "cloud", icon: <SiTerraform />, color: "#7B42BC" },
+    { name: "Firebase", category: "cloud", icon: <SiFirebase />, color: "#FFCA28" },
+    { name: "Linux", category: "cloud", icon: <SiLinux />, color: "#FCC624" },
+
+    // 5. Tools & Collaboration
+    { name: "Git", category: "tools", icon: <SiGit />, color: "#F05032" },
+    { name: "GitHub", category: "tools", icon: <FaGithub />, color: "#181717" },
+    { name: "GitLab", category: "tools", icon: <SiGitlab />, color: "#FC6D26" },
+    { name: "Jira", category: "tools", icon: <SiJira />, color: "#0052CC" },
+    { name: "Confluence", category: "tools", icon: <SiConfluence />, color: "#172B4D" },
+
+    // 6. Design & Media
     { name: "Figma", category: "design", icon: <SiFigma />, color: "#ff7262" },
     { name: "Adobe Photoshop", category: "design", icon: <SiAdobephotoshop />, color: "#3da1e9ff" },
     { name: "Adobe Illustrator", category: "design", icon: <SiAdobeillustrator />, color: "#e69926ff" },
@@ -208,10 +217,11 @@ export const data = {
                 badge: "Compétences",
                 title: "Outils & \n Tech",
                 categories: {
-                    cloud: "Cloud & DevOps",
-                    backend: "Backend",
+                    languages: "Langages",
                     frontend: "Frontend",
-                    systems: "Langages & Systèmes",
+                    backend: "Backend & BD",
+                    cloud: "Cloud & DevOps",
+                    tools: "Outils",
                     design: "Design"
                 }
             }
@@ -366,10 +376,11 @@ export const data = {
                 badge: "Skills",
                 title: "Tools & \n Tech",
                 categories: {
-                    cloud: "Cloud & DevOps",
-                    backend: "Backend",
+                    languages: "Languages",
                     frontend: "Frontend",
-                    systems: "Languages & Systems",
+                    backend: "Backend & DB",
+                    cloud: "Cloud & DevOps",
+                    tools: "Tools",
                     design: "Design"
                 }
             }
