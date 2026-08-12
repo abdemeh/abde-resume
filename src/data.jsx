@@ -1,20 +1,19 @@
 import React from 'react';
-import { FaGithub, FaEnvelope, FaJava, FaAws, FaMicrosoft, FaInstagram, FaBehance } from 'react-icons/fa';
+import { FaJava, FaAws, FaGithub, FaInstagram, FaEnvelope } from 'react-icons/fa';
 import { FaXTwitter } from "react-icons/fa6";
 import { VscAzure } from "react-icons/vsc";
 import {
     SiJavascript, SiPython, SiC, SiCplusplus, SiR,
     SiScala, SiReact, SiAngular, SiHtml5, SiCss3, SiPhp, SiNodedotjs,
     SiElectron, SiTailwindcss, SiOracle, SiGit, SiDocker, SiFirebase, SiGooglecloud, SiTerraform,
-    SiLinux, SiApple, SiSpring, SiMysql, SiMongodb, SiAdobephotoshop, SiAdobeillustrator, SiAdobepremierepro, SiFigma,
-    SiJira, SiConfluence, SiGitlab
+    SiLinux, SiSpring, SiMysql, SiMongodb, SiAdobephotoshop, SiAdobeillustrator, SiAdobepremierepro, SiFigma,
+    SiJira, SiConfluence, SiGitlab, SiApachekafka
 } from 'react-icons/si';
 
 const socialLinks = [
     { icon: <FaGithub />, url: "https://github.com/abdemeh" },
     { icon: <FaInstagram />, url: "https://instagram.com/its.bnadem" },
     { icon: <FaXTwitter />, url: "https://x.com/_elmahdaoui" },
-    { icon: <FaBehance />, url: "https://behance.net/_elmahdaoui" },
     { icon: <FaEnvelope />, url: "mailto:elmahdaoui@cy-tech.fr" }
 ];
 
@@ -43,6 +42,7 @@ const skills = [
     { name: "Oracle", category: "backend", icon: <SiOracle />, color: "#F80000" },
     { name: "MySQL", category: "backend", icon: <SiMysql />, color: "#00758F" },
     { name: "MongoDB", category: "backend", icon: <SiMongodb />, color: "#47A248" },
+    { name: "Kafka", category: "backend", icon: <SiApachekafka />, color: "#9ca3af" },
 
     // 4. Cloud & DevOps
     { name: "AWS", category: "cloud", icon: <FaAws />, color: "#FF9900" },
@@ -55,7 +55,7 @@ const skills = [
 
     // 5. Tools & Collaboration
     { name: "Git", category: "tools", icon: <SiGit />, color: "#F05032" },
-    { name: "GitHub", category: "tools", icon: <FaGithub />, color: "#181717" },
+    { name: "GitHub", category: "tools", icon: <FaGithub />, color: "#9ca3af" },
     { name: "GitLab", category: "tools", icon: <SiGitlab />, color: "#FC6D26" },
     { name: "Jira", category: "tools", icon: <SiJira />, color: "#0052CC" },
     { name: "Confluence", category: "tools", icon: <SiConfluence />, color: "#172B4D" },
@@ -141,7 +141,14 @@ export const data = {
         ],
         projects: [
             {
-                title: "Plateforme RGPD - Anonymisation de Données",
+                title: "AbdelXP.exe",
+                tags: ["React 19", "Vite", "CSS3", "JavaScript"],
+                description: "Application portfolio au style rétro Windows XP, avec des fenêtres déplaçables, un menu Démarrer, une barre des tâches, le support multilingue, des effets sonores et des fonds d'écran personnalisables.",
+                linkText: "Voir sur GitHub",
+                url: "https://github.com/abdemeh/AbdelXP.exe"
+            },
+            {
+                title: "Plateforme RGPD",
                 tags: ["Python", "Flask", "React", "TailwindCSS", "Pandas", "Numpy"],
                 description: "Développement d'une application web complète pour anonymiser des fichiers CSV via plusieurs méthodes (masquage, pseudonymisation, généralisation, perturbation, agrégation). Backend en Flask, frontend en React.js/TailwindCSS avec API REST.",
                 linkText: "Voir sur GitHub",
@@ -155,7 +162,7 @@ export const data = {
                 url: "https://github.com/abdemeh/apex-f1"
             },
             {
-                title: "Projet de Gestion de Portefeuilles Financiers en Temps Réel",
+                title: "Gestion de Portefeuilles Financiers",
                 tags: ["Scala", "Akka HTTP", "React", "MongoDB", "TailwindCSS"],
                 description: "Développement de plateforme en Scala (Akka HTTP) avec une base de données MongoDB. API REST sécurisée, authentification via JWT, interface frontend moderne avec React.js et TailwindCSS.",
                 linkText: "Voir sur GitHub",
@@ -189,7 +196,7 @@ export const data = {
                 titlePrefix: "Je suis",
                 titleSuffix: "Étudiant Cloud Computing",
                 contactButton: "Contactez-moi",
-                downloadCv: "Télécharger CV"
+                downloadCv: "Voir le CV"
             },
             about: {
                 badge: "À propos",
@@ -210,7 +217,7 @@ export const data = {
             },
             resume: {
                 badge: "Parcours",
-                title: "Éducation & \n Expérience",
+                title: "Mon Parcours",
                 educationTitle: "Éducation",
                 experienceTitle: "Expérience"
             },
@@ -221,7 +228,7 @@ export const data = {
             },
             skills: {
                 badge: "Compétences",
-                title: "Outils & \n Tech",
+                title: "Compétences",
                 categories: {
                     languages: "Langages",
                     frontend: "Frontend",
@@ -306,7 +313,14 @@ export const data = {
         ],
         projects: [
             {
-                title: "GDPR Platform - Data Anonymization",
+                title: "AbdelXP.exe",
+                tags: ["React 19", "Vite", "CSS3", "JavaScript"],
+                description: "Retro Windows XP-styled portfolio app featuring draggable windows, a start menu, taskbar, multi-language support, sound effects, and customizable wallpapers.",
+                linkText: "Open in GitHub",
+                url: "https://github.com/abdemeh/AbdelXP.exe"
+            },
+            {
+                title: "GDPR Platform",
                 tags: ["Python", "Flask", "React", "TailwindCSS", "Pandas", "Numpy"],
                 description: "Development of a complete web application to anonymize CSV files via multiple methods (masking, pseudonymization, generalization, perturbation, aggregation). Flask backend, React.js/TailwindCSS frontend with REST API.",
                 linkText: "Open in GitHub",
@@ -320,7 +334,7 @@ export const data = {
                 url: "https://github.com/abdemeh/apex-f1"
             },
             {
-                title: "Real-Time Financial Portfolio Management Project",
+                title: "Financial Portfolio Manager",
                 tags: ["Scala", "Akka HTTP", "React", "MongoDB", "TailwindCSS"],
                 description: "Platform development in Scala (Akka HTTP) with a MongoDB database. Secure REST API, JWT authentication, modern frontend interface with React.js and TailwindCSS.",
                 linkText: "Open in GitHub",
@@ -354,7 +368,7 @@ export const data = {
                 titlePrefix: "I'm",
                 titleSuffix: "Cloud Computing Student",
                 contactButton: "Contact Me",
-                downloadCv: "Download CV"
+                downloadCv: "View CV"
             },
             about: {
                 badge: "About Me",
@@ -375,7 +389,7 @@ export const data = {
             },
             resume: {
                 badge: "Resume",
-                title: "Education & \n Experience",
+                title: "My Journey",
                 educationTitle: "Education",
                 experienceTitle: "Experience"
             },
@@ -386,7 +400,7 @@ export const data = {
             },
             skills: {
                 badge: "Skills",
-                title: "Tools & \n Tech",
+                title: "Skills",
                 categories: {
                     languages: "Languages",
                     frontend: "Frontend",

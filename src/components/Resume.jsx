@@ -1,7 +1,7 @@
 import React from 'react';
 import Section from './Section';
 import { useLanguage } from '../context/LanguageContext';
-import { FaGraduationCap, FaBriefcase } from "react-icons/fa6";
+import { HiBriefcase, HiAcademicCap } from 'react-icons/hi';
 
 const ResumeItem = ({ title, subTitle, description, date }) => {
     return (
@@ -36,27 +36,7 @@ const Resume = () => {
                 <div>
                     <h3 className="text-3xl font-bold mb-10 flex items-center gap-4">
                         <span className="w-12 h-12 rounded-full bg-[var(--surface-2)] border border-[var(--border-strong)] flex items-center justify-center text-[#b9a0ff] text-xl">
-                            <FaGraduationCap />
-                        </span>
-                        {ui.resume.educationTitle}
-                    </h3>
-                    <div className="space-y-4">
-                        {education.map((item, index) => (
-                            <ResumeItem
-                                key={index}
-                                date={item.period}
-                                title={item.title}
-                                subTitle={item.institution}
-                                description={item.description}
-                            />
-                        ))}
-                    </div>
-                </div>
-
-                <div>
-                    <h3 className="text-3xl font-bold mb-10 flex items-center gap-4">
-                        <span className="w-12 h-12 rounded-full bg-[var(--surface-2)] border border-[var(--border-strong)] flex items-center justify-center text-[#b9a0ff] text-xl">
-                            <FaBriefcase />
+                            <HiBriefcase />
                         </span>
                         {ui.resume.experienceTitle}
                     </h3>
@@ -67,6 +47,25 @@ const Resume = () => {
                                 date={item.period}
                                 title={item.title}
                                 subTitle={item.company}
+                                description={item.description}
+                            />
+                        ))}
+                    </div>
+                </div>
+                <div>
+                    <h3 className="text-3xl font-bold mb-10 flex items-center gap-4">
+                        <span className="w-12 h-12 rounded-full bg-[var(--surface-2)] border border-[var(--border-strong)] flex items-center justify-center text-[#b9a0ff] text-xl">
+                            <HiAcademicCap />
+                        </span>
+                        {ui.resume.educationTitle}
+                    </h3>
+                    <div className="space-y-4">
+                        {education.map((item, index) => (
+                            <ResumeItem
+                                key={index}
+                                date={item.period}
+                                title={item.title}
+                                subTitle={item.institution}
                                 description={item.description}
                             />
                         ))}

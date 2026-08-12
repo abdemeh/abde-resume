@@ -2,8 +2,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { useTheme } from '../context/ThemeContext';
-import { LuMessageSquareText } from 'react-icons/lu';
-import { HiHome, HiUser, HiDocumentText, HiBriefcase, HiLightningBolt, HiMoon, HiSun } from "react-icons/hi";
+import { HiHome, HiUser, HiDocumentText, HiBriefcase, HiLightningBolt, HiMoon, HiSun, HiChatAlt2 } from 'react-icons/hi';
 
 const Header = () => {
     const { language, toggleLanguage, currentData } = useLanguage();
@@ -15,11 +14,11 @@ const Header = () => {
         : (isDarkTheme ? 'Switch to light mode' : 'Switch to dark mode');
 
     const navItems = useMemo(() => ([
-        { href: "#home", label: currentData.ui.nav.home, icon: <HiHome className="text-xl" /> },
-        { href: "#portfolio", label: currentData.ui.nav.portfolio, icon: <HiBriefcase className="text-xl" /> },
-        { href: "#about", label: currentData.ui.nav.about, icon: <HiUser className="text-xl" /> },
-        { href: "#resume", label: currentData.ui.nav.resume, icon: <HiDocumentText className="text-xl" /> },
-        { href: "#skills", label: currentData.ui.skills.badge, icon: <HiLightningBolt className="text-xl" /> },
+        { href: "#home", label: currentData.ui.nav.home, icon: HiHome },
+        { href: "#portfolio", label: currentData.ui.nav.portfolio, icon: HiBriefcase },
+        { href: "#about", label: currentData.ui.nav.about, icon: HiUser },
+        { href: "#resume", label: currentData.ui.nav.resume, icon: HiDocumentText },
+        { href: "#skills", label: currentData.ui.skills.badge, icon: HiLightningBolt },
     ]), [currentData]);
 
     const [activeSection, setActiveSection] = useState('home');
@@ -55,64 +54,44 @@ const Header = () => {
 
     return (
         <>
-            {/* --- Mobile Layout (< 1025px) --- */}
+            {/* --- Mobile Layout (< 1090px) --- */}
 
-            {/* Mobile Bottom Bar: Nav+Contact | Lang */}
-            <nav className="min-[1090px]:hidden fixed bottom-6 left-1/2 -translate-x-1/2 z-50 bg-[var(--glass-bg)] backdrop-blur-xl border border-[var(--glass-border)] rounded-full px-6 py-4 shadow-2xl flex items-center gap-6 transition-colors duration-300">
-
-                {/* Left: Navigation Icons + Contact */}
-                <div className="flex items-center gap-5">
-                    {navItems.map((item, index) => {
-                        const sectionId = item.href.replace('#', '');
-                        const isActive = sectionId === activeSection;
-
-                        return (
-                            <a
-                                key={index}
-                                href={item.href}
-                                className={`transition-all ${
-                                    isActive
-                                        ? 'text-[var(--text-primary)]'
-                                        : 'text-[var(--text-muted)] hover:text-[var(--text-primary)]'
-                                }`}
-                                aria-label={item.label}
-                                aria-current={isActive ? 'page' : undefined}
-                            >
-                                {item.icon}
-                            </a>
-                        );
-                    })}
-                    {/* Contact Icon as part of Nav */}
-                    <a
-                        href="#contact"
-                        className="text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-all"
-                        aria-label="Contact"
-                    >
-                        <LuMessageSquareText className="text-xl" />
-                    </a>
-                </div>
-
-                {/* Separator */}
-                <div className="w-[1px] h-5 bg-[var(--border-strong)]"></div>
-
-                {/* Right: Language Text Toggle */}
+            {/* Mobile Top Bar: Lang only */}
+            <div className="min-[1090px]:hidden fixed top-4 right-4 z-50 flex items-center bg-[var(--glass-bg)] backdrop-blur-xl border border-[var(--glass-border)] rounded-full px-4 py-2 shadow-lg transition-colors duration-300">
                 <button
                     onClick={toggleLanguage}
                     className="text-[var(--text-muted)] font-bold text-sm hover:text-[var(--text-primary)] transition-colors"
                 >
                     {language === 'fr' ? 'EN' : 'FR'}
                 </button>
+            </div>
 
-                <div className="w-[1px] h-5 bg-[var(--border-strong)]"></div>
+            {/* Mobile Bottom Bar: Nav icons only */}
+            <nav className="min-[1090px]:hidden fixed bottom-6 left-1/2 -translate-x-1/2 z-50 bg-[var(--glass-bg)] backdrop-blur-xl border border-[var(--glass-border)] rounded-full px-6 py-4 shadow-2xl flex items-center gap-6 transition-colors duration-300">
+                {navItems.map((item, index) => {
+                    const sectionId = item.href.replace('#', '');
+                    const isActive = sectionId === activeSection;
+                    const NavIcon = item.icon;
 
-                <button
-                    onClick={toggleTheme}
-                    className="text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors"
-                    aria-label={themeToggleLabel}
-                    title={themeToggleLabel}
+                        return (
+                        <a
+                            key={index}
+                            href={item.href}
+                            className="transition-all"
+                            aria-label={item.label}
+                            aria-current={isActive ? 'page' : undefined}
+                        >
+                            <NavIcon className={`text-xl transition-colors ${isActive ? 'text-[var(--text-primary)]' : 'text-[var(--text-muted)] hover:text-[var(--text-primary)]'}`} />
+                        </a>
+                    );
+                })}
+                <a
+                    href="#contact"
+                    className="transition-all"
+                    aria-label="Contact"
                 >
-                    {isDarkTheme ? <HiSun className="text-xl" /> : <HiMoon className="text-xl" />}
-                </button>
+                    <ChatIcon size="1.25rem" className="text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors" />
+                </a>
             </nav>
 
 
@@ -125,6 +104,7 @@ const Header = () => {
                     {navItems.map((item, index) => {
                         const sectionId = item.href.replace('#', '');
                         const isActive = sectionId === activeSection;
+                        const NavIcon = item.icon;
 
                         return (
                             <a
@@ -139,7 +119,7 @@ const Header = () => {
                             >
                                 {/* Icon for Compact Desktop (1090px - 1450px) */}
                                 <span className="block min-[1450px]:hidden text-xl">
-                                    {item.icon}
+                                    <NavIcon className={`transition-colors ${isActive ? 'text-[var(--text-primary)]' : 'text-[var(--text-muted)] hover:text-[var(--text-primary)]'}`} />
                                 </span>
                                 {/* Text for Large Desktop (>= 1450px) */}
                                 <span className="hidden min-[1450px]:block">
@@ -170,7 +150,7 @@ const Header = () => {
                         href="#contact"
                         className="flex h-12 items-center gap-2 px-6 py-3 rounded-full bg-[var(--button-primary-bg)] text-[var(--button-primary-text)] font-bold hover:bg-[var(--button-primary-hover)] transition-colors shadow-lg"
                     >
-                        {currentData.ui.header.letsTalk} <LuMessageSquareText className="text-xl" />
+                        {currentData.ui.header.letsTalk} <HiChatAlt2 className="text-xl" />
                     </a>
                 </div>
             </header>

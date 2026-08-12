@@ -28,7 +28,7 @@ const Portfolio = () => {
                                         ))}
                                     </div>
                                     <h3 className="text-3xl font-bold mb-4 group-hover:text-[#b9a0ff] transition-colors">{project.title}</h3>
-                                    <p className="text-[var(--text-muted)] leading-relaxed mb-8">
+                                    <p className="text-[var(--text-muted)] leading-relaxed mb-8 line-clamp-3">
                                         {project.description}
                                     </p>
                                 </div>

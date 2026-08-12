@@ -2,7 +2,7 @@
 import React from 'react';
 import Section from './Section';
 import { useLanguage } from '../context/LanguageContext';
-import { FaDownload } from "react-icons/fa6";
+import { HiEye } from 'react-icons/hi';
 
 const Hero = () => {
     const { currentData, language } = useLanguage();
@@ -28,10 +28,11 @@ const Hero = () => {
                     </a>
                     <a
                         href={`./assets/docs/resume_${language}.pdf`}
-                        download={`Abdellatif_El_Mahdaoui_Resume_${language.toUpperCase()}.pdf`}
+                        target="_blank"
+                        rel="noreferrer"
                         className="inline-flex items-center gap-2 px-8 py-4 rounded-full border border-[var(--border-strong)] bg-[var(--surface-2)] text-[var(--text-primary)] font-bold hover:bg-[var(--surface-1)] hover:border-[var(--text-primary)] transition-all"
                     >
-                        {ui.hero.downloadCv} <FaDownload />
+                        {ui.hero.downloadCv} <HiEye className="text-xl" />
                     </a>
                 </div>
             </div>

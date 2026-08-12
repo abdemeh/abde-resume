@@ -3,7 +3,7 @@ import { data } from '../data';
 
 const LanguageContext = createContext();
 const LANGUAGE_SWITCH_CLASS = 'language-switching';
-const LANGUAGE_SWITCH_DURATION_MS = 320;
+const FADE_DURATION_MS = 180;
 
 export const LanguageProvider = ({ children }) => {
     // Check localStorage or default to 'fr' (since user is French based on data)
@@ -26,31 +26,22 @@ export const LanguageProvider = ({ children }) => {
         };
     }, []);
 
-    const runLanguageTransition = () => {
-        if (typeof document === 'undefined') {
-            return;
-        }
-
-        const rootElement = document.documentElement;
-        rootElement.classList.remove(LANGUAGE_SWITCH_CLASS);
-
-        // Force reflow so repeated toggles retrigger the same CSS animation class.
-        void rootElement.offsetWidth;
-
-        rootElement.classList.add(LANGUAGE_SWITCH_CLASS);
-
+    const toggleLanguage = () => {
+        if (typeof document === 'undefined') return;
         if (languageSwitchTimeoutRef.current) {
             window.clearTimeout(languageSwitchTimeoutRef.current);
         }
 
-        languageSwitchTimeoutRef.current = window.setTimeout(() => {
-            rootElement.classList.remove(LANGUAGE_SWITCH_CLASS);
-        }, LANGUAGE_SWITCH_DURATION_MS);
-    };
+        const root = document.documentElement;
+        root.classList.add(LANGUAGE_SWITCH_CLASS);
 
-    const toggleLanguage = () => {
-        runLanguageTransition();
-        setLanguage(prev => prev === 'fr' ? 'en' : 'fr');
+        // Swap language while content is invisible, then fade back in
+        languageSwitchTimeoutRef.current = window.setTimeout(() => {
+            setLanguage(prev => prev === 'fr' ? 'en' : 'fr');
+            languageSwitchTimeoutRef.current = window.setTimeout(() => {
+                root.classList.remove(LANGUAGE_SWITCH_CLASS);
+            }, FADE_DURATION_MS);
+        }, FADE_DURATION_MS);
     };
 
     // Helper to get current data

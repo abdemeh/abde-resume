@@ -27,6 +27,16 @@
 </head>
 
 <body>
+  <!-- Reads saved theme so page-loader bg matches, avoiding a flash -->
+  <script>document.body.style.background=localStorage.getItem('theme')==='light'?'#f3f6fb':'#050505'</script>
+  <div id="app-loader" style="position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:inherit;z-index:99999;transition:opacity 300ms ease">
+    <div style="width:38px;height:38px;border-radius:50%;border:3px solid transparent;border-top-color:#b9a0ff;border-right-color:#ffb0e0;animation:_ls 0.65s linear infinite"></div>
+    <style>@keyframes _ls{to{transform:rotate(360deg)}}</style>
+  </div>
+  <!-- Lang-switch spinner lives outside #root so parent opacity does not affect it -->
+  <div class="lang-switch-overlay">
+    <div class="lang-spinner"></div>
+  </div>
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
 </body>
