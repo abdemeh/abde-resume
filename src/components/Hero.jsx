@@ -2,7 +2,7 @@
 import React from 'react';
 import Section from './Section';
 import { useLanguage } from '../context/LanguageContext';
-import { HiEye } from 'react-icons/hi';
+import { HiEye } from 'react-icons/hi2';
 
 const Hero = () => {
     const { currentData, language } = useLanguage();

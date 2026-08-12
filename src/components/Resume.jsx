@@ -1,7 +1,7 @@
 import React from 'react';
 import Section from './Section';
 import { useLanguage } from '../context/LanguageContext';
-import { HiBriefcase, HiAcademicCap } from 'react-icons/hi';
+import { HiBriefcase, HiAcademicCap } from 'react-icons/hi2';
 
 const ResumeItem = ({ title, subTitle, description, date }) => {
     return (

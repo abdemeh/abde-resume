@@ -2,7 +2,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { useTheme } from '../context/ThemeContext';
-import { HiHome, HiUser, HiDocumentText, HiBriefcase, HiLightningBolt, HiMoon, HiSun, HiChatAlt2 } from 'react-icons/hi';
+import { HiHome, HiUser, HiDocumentText, HiBriefcase, HiBolt, HiMoon, HiSun, HiChatBubbleLeftRight } from 'react-icons/hi2';
 
 const Header = () => {
     const { language, toggleLanguage, currentData } = useLanguage();
@@ -18,7 +18,7 @@ const Header = () => {
         { href: "#portfolio", label: currentData.ui.nav.portfolio, icon: HiBriefcase },
         { href: "#about", label: currentData.ui.nav.about, icon: HiUser },
         { href: "#resume", label: currentData.ui.nav.resume, icon: HiDocumentText },
-        { href: "#skills", label: currentData.ui.skills.badge, icon: HiLightningBolt },
+        { href: "#skills", label: currentData.ui.skills.badge, icon: HiBolt },
     ]), [currentData]);
 
     const [activeSection, setActiveSection] = useState('home');
@@ -90,7 +90,7 @@ const Header = () => {
                     className="transition-all"
                     aria-label="Contact"
                 >
-                    <ChatIcon size="1.25rem" className="text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors" />
+                    <HiChatBubbleLeftRight className="text-xl text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors" />
                 </a>
             </nav>
 
@@ -150,7 +150,7 @@ const Header = () => {
                         href="#contact"
                         className="flex h-12 items-center gap-2 px-6 py-3 rounded-full bg-[var(--button-primary-bg)] text-[var(--button-primary-text)] font-bold hover:bg-[var(--button-primary-hover)] transition-colors shadow-lg"
                     >
-                        {currentData.ui.header.letsTalk} <HiChatAlt2 className="text-xl" />
+                        {currentData.ui.header.letsTalk} <HiChatBubbleLeftRight className="text-xl" />
                     </a>
                 </div>
             </header>
