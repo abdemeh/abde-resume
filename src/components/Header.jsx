@@ -19,6 +19,7 @@ const Header = () => {
         { href: "#about", label: currentData.ui.nav.about, icon: HiUser },
         { href: "#resume", label: currentData.ui.nav.resume, icon: HiDocumentText },
         { href: "#skills", label: currentData.ui.skills.badge, icon: HiBolt },
+        { href: "#contact", label: "Contact" },
     ]), [currentData]);
 
     const [activeSection, setActiveSection] = useState('home');
@@ -68,7 +69,7 @@ const Header = () => {
 
             {/* Mobile Bottom Bar: Nav icons only */}
             <nav className="min-[1090px]:hidden fixed bottom-6 left-1/2 -translate-x-1/2 z-50 bg-[var(--glass-bg)] backdrop-blur-xl border border-[var(--glass-border)] rounded-full px-6 py-4 shadow-2xl flex items-center gap-6 transition-colors duration-300">
-                {navItems.map((item, index) => {
+                {navItems.filter(item => item.icon).map((item, index) => {
                     const sectionId = item.href.replace('#', '');
                     const isActive = sectionId === activeSection;
                     const NavIcon = item.icon;
@@ -90,7 +91,7 @@ const Header = () => {
                     className="transition-all"
                     aria-label="Contact"
                 >
-                    <HiChatBubbleLeftRight className="text-xl text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors" />
+                    <HiChatBubbleLeftRight className={`text-xl transition-colors ${activeSection === 'contact' ? 'text-[var(--text-primary)]' : 'text-[var(--text-muted)] hover:text-[var(--text-primary)]'}`} />
                 </a>
             </nav>
 
@@ -101,7 +102,7 @@ const Header = () => {
 
                 {/* Nav Pill: Always Text, Bold Mode */}
                 <nav className="flex items-center gap-8 text-md font-bold text-[var(--text-muted)] bg-[var(--glass-bg)] backdrop-blur-md px-8 py-4 rounded-full border border-[var(--glass-border)] shadow-2xl transition-all duration-300">
-                    {navItems.map((item, index) => {
+                    {navItems.filter(item => item.icon).map((item, index) => {
                         const sectionId = item.href.replace('#', '');
                         const isActive = sectionId === activeSection;
                         const NavIcon = item.icon;
