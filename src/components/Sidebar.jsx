@@ -1,11 +1,10 @@
 
 import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
-import profileImg from '../assets/images/profile.png';
 
 const Sidebar = () => {
     const { currentData } = useLanguage();
-    const { profile, ui } = currentData;
+    const { profile } = currentData;
 
     return (
         <div className="flex flex-col h-full p-8 md:p-10 justify-between">
@@ -20,7 +19,7 @@ const Sidebar = () => {
 
                 <div className="mb-8">
                     <div className="aspect-square rounded-[2rem] overflow-hidden mb-6 border border-[var(--border-color)] shadow-2xl transition-colors duration-300">
-                        <img src={profileImg} alt={profile.name} className="w-full h-full object-cover" />
+                        <img src={`${import.meta.env.BASE_URL}assets/images/profile.png`} alt={profile.name} className="w-full h-full object-cover" />
                     </div>
                 </div>
 

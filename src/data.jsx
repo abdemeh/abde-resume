@@ -70,10 +70,10 @@ export const data = {
     fr: {
         profile: {
             name: "Abdellatif El-Mahdaoui",
-            title: "Étudiant en 3ᵉ année d'ingénierie, spécialité Cloud Computing",
-            specialization: "Étudiant en 3ᵉ année d'ingénierie, spécialité Cloud Computing",
-            bio: "Actuellement étudiant ingénieur à CY Tech, je me spécialise dans le Cloud Computing et le développement Full Stack. Je suis passionné par la création de solutions évolutives et d'expériences utilisateur intuitives.",
-            longBio: "Étudiant en 3ᵉ année du cycle ingénieur (BAC+5) à CY Tech, spécialité Ingénierie du Cloud Computing. Passionné par le développement logiciel, les systèmes distribués et les solutions cloud, je me distingue par ma curiosité, ma rigueur et mon autonomie. Mon parcours m'a permis de développer des compétences solides en environnements DevOps et Cloud, avec un fort intérêt pour l'innovation technologique.",
+            title: "Ingénieur logiciel chez Atos",
+            specialization: "Ingénieur logiciel chez Atos",
+            bio: "Ingénieur logiciel chez Atos, je conçois et développe des applications Full Stack avec Angular, Spring et AWS. Passionné par le Cloud Computing, je crée des solutions évolutives et des interfaces intuitives.",
+            longBio: "Ingénieur logiciel chez Atos, formé à CY Tech en ingénierie du Cloud Computing, je travaille sur des applications Full Stack avec Angular, Spring et les services AWS. Mon parcours allie développement logiciel, systèmes distribués et environnements DevOps. Curieux, rigoureux et autonome, j’aime concevoir des solutions fiables et soigner l’expérience utilisateur, au travail comme dans mes projets personnels.",
             locationLabel: "Basé à:",
             specializationLabel: "Spécialisation:",
             contact: {
@@ -89,7 +89,7 @@ export const data = {
         experience: [
             {
                 period: "Mars 2026 - Présent",
-                title: "Développeur d'Application (Stage)",
+                title: "Ingénieur Logiciel (CDI)",
                 company: "Atos Pessac, France",
                 description: "Contribution au développement d'un CRM pour O2. Participation au développement frontend (Angular) et backend (Spring), avec intégration de services AWS (Polly, Transcribe, S3)."
             },
@@ -140,6 +140,13 @@ export const data = {
         ],
         projects: [
             {
+                title: "MiOS Launcher",
+                tags: ["Android TV", "UI/UX", "ChatGPT / Codex"],
+                description: "Launcher Android TV épuré, inspiré d’Apple : flou, transparence, favoris, thèmes et veille avec horloge. Navigation à la télécommande, développé avec ChatGPT/Codex et testé sur TV Xiaomi.",
+                linkText: "Voir sur GitHub",
+                url: "https://github.com/abdemeh/MiOS-Launcher"
+            },
+            {
                 title: "AbdelXP.exe",
                 tags: ["React 19", "Vite", "CSS3", "JavaScript"],
                 description: "Application portfolio au style rétro Windows XP, avec des fenêtres déplaçables, un menu Démarrer, une barre des tâches, le support multilingue, des effets sonores et des fonds d'écran personnalisables.",
@@ -173,13 +180,6 @@ export const data = {
                 description: "Application de gestion de bibliothèque complète : gestion des utilisateurs, suivi des stocks, alertes de prêts et historique. Interface graphique intuitive pour bibliothécaires.",
                 linkText: "Voir sur GitHub",
                 url: "https://github.com/abdemeh/CY-Books"
-            },
-            {
-                title: "Plateforme Universitaire",
-                tags: ["PHP", "MySQL", "Bootstrap", "Tomcat", "HTML", "CSS", "JS"],
-                description: "Application web pour la gestion d'utilisateurs et services universitaires.",
-                linkText: "Voir sur GitHub",
-                url: "https://github.com/abdemeh/GestionMaterielUniversitaire"
             }
         ],
         ui: {
@@ -193,7 +193,8 @@ export const data = {
             hero: {
                 badge: "Rencontrons-nous !",
                 titlePrefix: "Je suis",
-                titleSuffix: "Étudiant Cloud Computing",
+                titleSuffix: "Ingénieur logiciel",
+                companyPrefix: "chez",
                 contactButton: "Contactez-moi",
                 downloadCv: "Voir le CV"
             },
@@ -201,7 +202,7 @@ export const data = {
                 badge: "À propos",
                 title: "Qui",
                 titleHighlight: "suis-je?",
-                whoAmI: "Cloud Computing",
+                whoAmI: "Ingénieur logiciel chez Atos",
                 quote: "*Je crois que le design va au-delà de l'esthétique—il s'agit de résoudre des problèmes et de créer des expériences intuitives et agréables pour les utilisateurs.",
                 experienceLabel: "Années d'expérience",
                 projectsLabel: "Projets terminés"
@@ -242,10 +243,10 @@ export const data = {
     en: {
         profile: {
             name: "Abdellatif El-Mahdaoui",
-            title: "Engineering Student - Cloud Computing Specialty",
-            specialization: "3rd-year Cloud Computing Engineering Student",
-            bio: "Currently an engineering student at CY Tech, I specialize in Cloud Computing and Full Stack development. I'm passionate about building scalable solutions and creating intuitive user experiences.",
-            longBio: "3rd-year engineering student (Master's level) at CY Tech, specializing in Cloud Computing Engineering. Passionate about software development, distributed systems, and cloud solutions, I distinguish myself through curiosity, rigor, and autonomy. My background has allowed me to develop solid skills in DevOps and Cloud environments, with a strong interest in technological innovation.",
+            title: "Software Engineer at Atos",
+            specialization: "Software Engineer at Atos",
+            bio: "Software engineer at Atos, I design and build full-stack applications with Angular, Spring, and AWS. Passionate about Cloud Computing, I create scalable solutions and intuitive interfaces.",
+            longBio: "Software engineer at Atos with a background in Cloud Computing Engineering at CY Tech, I work on full-stack applications using Angular, Spring, and AWS services. My experience spans software development, distributed systems, and DevOps environments. Curious, thorough, and independent, I enjoy building reliable solutions and thoughtful user experiences, both at work and in my personal projects.",
             locationLabel: "Based in:",
             specializationLabel: "Specialization:",
             contact: {
@@ -261,7 +262,7 @@ export const data = {
         experience: [
             {
                 period: "March 2026 - Now",
-                title: "Application Developer (Internship)",
+                title: "Software Engineer (Permanent)",
                 company: "Atos Pessac, France",
                 description: "Contributing to the development of a CRM for O2. Involved in frontend (Angular) and backend (Spring) development, with integration of AWS services (Polly, Transcribe, S3)."
             },
@@ -312,6 +313,13 @@ export const data = {
         ],
         projects: [
             {
+                title: "MiOS Launcher",
+                tags: ["Android TV", "UI/UX", "ChatGPT / Codex"],
+                description: "Clean, Apple-inspired Android TV launcher with blur, transparency, favorites, themes, and a clock screensaver. Remote-friendly navigation, built with ChatGPT/Codex and tested on Xiaomi TV.",
+                linkText: "Open in GitHub",
+                url: "https://github.com/abdemeh/MiOS-Launcher"
+            },
+            {
                 title: "AbdelXP.exe",
                 tags: ["React 19", "Vite", "CSS3", "JavaScript"],
                 description: "Retro Windows XP-styled portfolio app featuring draggable windows, a start menu, taskbar, multi-language support, sound effects, and customizable wallpapers.",
@@ -345,13 +353,6 @@ export const data = {
                 description: "Comprehensive library management application: user registration, book tracking, loan alerts, and history. User-friendly graphical interface designed for librarians.",
                 linkText: "Open in GitHub",
                 url: "https://github.com/abdemeh/CY-Books"
-            },
-            {
-                title: "University Platform",
-                tags: ["PHP", "MySQL", "Bootstrap", "Tomcat", "HTML", "CSS", "JS"],
-                description: "Web application for managing university users and services.",
-                linkText: "Open in GitHub",
-                url: "https://github.com/abdemeh/GestionMaterielUniversitaire"
             }
         ],
         ui: {
@@ -365,7 +366,8 @@ export const data = {
             hero: {
                 badge: "Let's meet!",
                 titlePrefix: "I'm",
-                titleSuffix: "Cloud Computing Student",
+                titleSuffix: "Software Engineer",
+                companyPrefix: "at",
                 contactButton: "Contact Me",
                 downloadCv: "View CV"
             },
@@ -373,7 +375,7 @@ export const data = {
                 badge: "About Me",
                 title: "Who",
                 titleHighlight: "am I?",
-                whoAmI: "Cloud Computing",
+                whoAmI: "Software Engineer at Atos",
                 quote: "*I believe that design is about more than just making things look good—it's about solving problems and creating intuitive, enjoyable experiences for users.",
                 experienceLabel: "Years of Experience",
                 projectsLabel: "Projects Completed"

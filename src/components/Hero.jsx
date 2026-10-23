@@ -11,12 +11,26 @@ const Hero = () => {
     return (
         <Section id="home" className="flex flex-col justify-center min-h-[60vh]">
             <div className="max-w-3xl">
-                <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight mb-8 tracking-tight">
-                    {ui.hero.titlePrefix} {profile.name.split(' ')[0]} <br />
+                <p className="text-lg md:text-xl font-medium text-[var(--text-muted)] mb-4">
+                    {ui.hero.titlePrefix} {profile.name.split(' ')[0]}.
+                </p>
+                <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight mb-6 tracking-tight">
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#b9a0ff] to-[#ffb0e0]">
                         {ui.hero.titleSuffix}
                     </span>
                 </h1>
+                <div className="inline-flex items-center gap-3 rounded-full border border-[var(--border-strong)] bg-[var(--surface-1)] px-5 py-3 mb-8">
+                        <span className="text-sm md:text-base font-medium text-[var(--text-muted)]">{ui.hero.companyPrefix}</span>
+                        <span
+                            role="img"
+                            aria-label="Atos"
+                            className="inline-block h-6 w-[4.6rem] bg-gradient-to-r from-[#b9a0ff] to-[#ffb0e0]"
+                            style={{
+                                mask: `url(${import.meta.env.BASE_URL}assets/images/atos.svg) center / contain no-repeat`,
+                                WebkitMask: `url(${import.meta.env.BASE_URL}assets/images/atos.svg) center / contain no-repeat`,
+                            }}
+                        />
+                </div>
 
                 <p className="text-[var(--text-muted)] text-xl md:text-2xl max-w-2xl leading-relaxed mb-12">
                     {profile.bio}
